@@ -350,11 +350,36 @@ body > .content:before {
 
 /*=======Side=======*/
 
+/*
 div.side {
     margin-top: 6px;
-    padding: 390px 0px 0px 0px; /* Change the first number based on the height of the sidebar image */
-    background: top right 0px no-repeat url(%%kirkgrate%%) !important;
+    padding: 390px 0px 0px 0px;
+    background: top right 0px no-repeat url(%%VikingsDefault%%) !important;
     background-size: 50%;
+}
+*/
+ 
+/*
+Animated sidebar. Uncomment the next block and comment the previous block for animations. Comment the next block and uncomment the previous for no animations
+*/
+
+div.side {
+    margin-top: 6px;
+    padding: 390px 0px 0px 0px;
+    background: top 0px right -1200px no-repeat url(%%gratingkirk%%) !important;
+    background-size: 50%;
+    animation: AnimatedSideBar 1s steps(4, end) infinite;
+    -webkit-animation: AnimatedSideBar 1s steps(4, end) infinite;
+    -moz-animation: AnimatedSideBar 1s steps(4, end) infinite;
+}
+
+
+@keyframes AnimatedSideBar {
+    100%  { background-position: -1204px 0; }
+}
+
+@-webkit-keyframes AnimatedSideBar {
+    100%  { background-position: -1204px 0; }
 }
 
 div.side:before {
