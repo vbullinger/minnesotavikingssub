@@ -1,0 +1,2001 @@
+/*
+________________________________________________
+CSS FOR THE MINNESOTA VIKINGS SUBREDDIT         |
+________________________________________________|
+MAIN CSS GUY:          /u/STAPLE_OVERLORD       |
+________________________________________________|
+CONTRIBUTORS:          /u/ADNASIUM              |
+                       /u/CUBEDG                |
+                       /u/NAPOLONBONERPARTS     |
+                       /u/VBULLINGER            |
+________________________________________________|
+CONTRIBUTIONS FROM:    MOD TEAM AT /r/ONEPIECE  |
+                       MOD TEAM AT /r/NFL       |
+________________________________________________|
+CSS SNIPPETS FROM:     /r/AZCARDINALS           |
+                       /r/RAVENS                |
+                       /r/DENVERBRONCOS         |
+                       /r/BUFFALOBILLS          |
+                       /r/SEAHAWKS              |
+                       /r/NFLROUNDTABLE         |
+________________________________________________|
+
+ORDER OF CSS:
+
+1. HTML & BODY
+2. HEADER
+3. FRONT PAGE LINKS
+ a. STICKY POSTS
+ b. SELF POSTS
+ c. RES LINK HIGHLIGHT
+ d. DOMAIN NAME
+ e. ANNOUNCEMENT BAR
+4. SIDE BAR
+ a. SUBMIT BOX
+ b. SEARCH BAR
+5. TAB & MENU
+ a. MENU
+ b. TAB MENU
+ c. DROPDOWN
+ d. NAVIGATION TOOLBAR
+6. COMMENT BOX
+7. EXTRAS
+8. FLAIR & LOGOS
+ a. REDDIT TITLE
+ b. SNOO POSITION
+ c. READERS TITLE
+ d. MODERATOR COLOR
+ f. FAVICONS
+ g. HYPETEXT
+________________________________________________
+
+*/
+/*=======HTML + Body=======*/
+html {
+    background: #FFFFFF;
+    padding: 0px 100px;
+    min-width: 1000px;
+}
+body {
+    background: #FFFFFF;
+    box-shadow: 0 0 16px #000;
+    margin: 0 auto;
+}
+body:before{
+content: "";
+width: 100px;
+height: 100%;
+position: fixed;
+z-index:-10;
+top: 0;
+left: 0;
+background-image:url(%%SideBackgroundDefense%%);
+background-position: 1400px 0;
+background-repeat: repeat-x;
+}
+
+body:after{
+content: "";
+width: 100px;
+height: 100%;
+position: fixed;
+z-index:-10;
+top: 0;
+right: 0;
+background-image:url(%%SideBackgroundDefense%%);
+background-position: 1100px 0;
+background-repeat: repeat-x;
+}
+/*–––––––Side Background MEW–––––––*/
+body div.tagline span.flair.flair-mew:before{
+  background-image:url(%%mewbg%%) !important;
+}
+body div.tagline span.flair.flair-mew:after{
+  background-image:url(%%mewbg%%) !important;
+}
+/*–––––––Side Background Offense–––––––*/
+body div.tagline span.flair.flair-08KirkCousins:before, body div.tagline span.flair.flair-mossfro:before, body div.tagline span.flair.flair-miracle:before, body div.tagline span.flair.flair-14StefonDiggs:before, body div.tagline span.flair.flair-33DalvinCook:before, body div.tagline span.flair.flair-19AdamThielen:before, body div.tagline span.flair.flair-82KyleRudolph:before, body div.tagline span.flair.flair-flip:before, body div.tagline span.flair.flair-mossfro:before, body div.tagline span.flair.flair-miracle:before, body div.tagline span.flair.flair-fist:before, body div.tagline span.flair.flair-canada:before, body div.tagline span.flair.flair-mew:before, body div.tagline span.flair.flair-mossfro:before, body div.tagline span.flair.flair-miracle:before, body div.tagline span.flair.flair-flip:before, body div.tagline span.flair.flair-kirk:before, body div.tagline span.flair.flair-julie:before, body div.tagline span.flair.flair-youlikethat:before, body div.tagline span.flair.flair-vikadontis:before, body div.tagline span.flair.flair-plunderbird:before, body div.tagline span.flair.flair-europe:before, body div.tagline span.flair.flair-africa:before, body div.tagline span.flair.flair-asia:before, body div.tagline span.flair.flair-australia:before, body div.tagline span.flair.flair-latinamerica:before, body div.tagline span.flair.flair-donut:before{
+content: "";
+
+width: 100px;
+height: 100%;
+position: fixed;
+z-index:-2;
+top: 0;
+left: 0;
+background-image:url(%%SidebarOffense2%%);
+background-position: 800px 0px;
+}
+body div.tagline span.flair.flair-08KirkCousins:after, body div.tagline span.flair.flair-mossfro:after, body div.tagline span.flair.flair-miracle:after, body div.tagline span.flair.flair-14StefonDiggs:after, body div.tagline span.flair.flair-33DalvinCook:after, body div.tagline span.flair.flair-19AdamThielen:after, body div.tagline span.flair.flair-82KyleRudolph:after, body div.tagline span.flair.flair-flip:after, body div.tagline span.flair.flair-mossfro:after, body div.tagline span.flair.flair-miracle:after, body div.tagline span.flair.flair-fist:after, body div.tagline span.flair.flair-canada:after, body div.tagline span.flair.flair-mew:after, body div.tagline span.flair.flair-mossfro:after, body div.tagline span.flair.flair-miracle:after, body div.tagline span.flair.flair-flip:after, body div.tagline span.flair.flair-kirk:after, body div.tagline span.flair.flair-julie:after, body div.tagline span.flair.flair-youlikethat:after, body div.tagline span.flair.flair-vikadontis:after, body div.tagline span.flair.flair-plunderbird:after, body div.tagline span.flair.flair-europe:after, body div.tagline span.flair.flair-africa:after, body div.tagline span.flair.flair-asia:after, body div.tagline span.flair.flair-australia:after, body div.tagline span.flair.flair-latinamerica:after, body div.tagline span.flair.flair-donut:after{
+content: "";
+width: 100px;
+height: 100%;
+position: fixed;
+z-index:-2;
+top: 0;
+right: 0;
+background-image:url(%%SidebarOffense2%%);
+background-position: 700px 0px;
+}
+body div.tagline span.flair.flair-08KirkCousins:before, body div.tagline span.flair.flair-mossfro:before, body div.tagline span.flair.flair-miracle:before, body div.tagline span.flair.flair-fist:before, body div.tagline span.flair.flair-canada:before, body div.tagline span.flair.flair-mew:before{ background-position: 1000px 0px;}
+body div.tagline span.flair.flair-14StefonDiggs:before{ background-position: 800px 0px;}
+body div.tagline span.flair.flair-33DalvinCook:before{ background-position: 400px 0px;}
+body div.tagline span.flair.flair-19AdamThielen:before{ background-position: 600px 0px;}
+body div.tagline span.flair.flair-82KyleRudolph:before{ background-position: 200px 0px;}
+body div.tagline span.flair.flair-08KirkCousins:after, body div.tagline span.flair.flair-mossfro:after, body div.tagline span.flair.flair-miracle:after, body div.tagline span.flair.flair-fist:after, body div.tagline span.flair.flair-canada:after, body div.tagline span.flair.flair-mew:after{ background-position: 900px 0px;}
+body div.tagline span.flair.flair-14StefonDiggs:after{ background-position: 700px 0px;}
+body div.tagline span.flair.flair-33DalvinCook:after{ background-position: 300px 0px;}
+body div.tagline span.flair.flair-19AdamThielen:after{ background-position: 500px 0px;}
+body div.tagline span.flair.flair-82KyleRudolph:after{ background-position: 100px 0px;}
+
+/*–––––––Side Background Defense–––––––*/
+
+body div.tagline span.flair.flair-22HarrisonSmith:before{ background-position: 400px 0px;}
+body div.tagline span.flair.flair-26TraeWaynes:before{ background-position: 200px 0px;}
+body div.tagline span.flair.flair-29XavierRhodes:before{ background-position: 1600px 0px;}
+body div.tagline span.flair.flair-54EricKendricks:before{ background-position: 1200px 0px;}
+body div.tagline span.flair.flair-55AnthonyBarr:before, body div.tagline span.flair.flair-barr:before{ background-position: 1400px 0px;}
+body div.tagline span.flair.flair-96BrianRobison:before{ background-position: 600px 0px;}
+body div.tagline span.flair.flair-97EversonGriffen:before{ background-position: 1000px 0px;}
+body div.tagline span.flair.flair-98LinvalJoseph:before, body div.tagline span.flair.flair-linval:before{ background-position: 800px 0px;}
+
+body div.tagline span.flair.flair-22HarrisonSmith:after{ background-position: 300px 0px;}
+body div.tagline span.flair.flair-26TraeWaynes:after{ background-position: 100px 0px;}
+body div.tagline span.flair.flair-29XavierRhodes:after{ background-position: 1500px 0px;}
+body div.tagline span.flair.flair-54EricKendricks:after{ background-position: 1100px 0px;}
+body div.tagline span.flair.flair-55AnthonyBarr:after, body div.tagline span.flair.flair-barr:after{ background-position: 1300px 0px;}
+body div.tagline span.flair.flair-96BrianRobison:after{ background-position: 500px 0px;}
+body div.tagline span.flair.flair-97EversonGriffen:after{ background-position: 900px 0px;}
+body div.tagline span.flair.flair-98LinvalJoseph:after, body div.tagline span.flair.flair-linval:after{ background-position: 700px 0px;}
+
+body div.tagline span.flair.flair-22HarrisonSmith:before, body div.tagline span.flair.flair-26TraeWaynes:before, body div.tagline span.flair.flair-29XavierRhodes:before, body div.tagline span.flair.flair-54EricKendricks:before, body div.tagline span.flair.flair-55AnthonyBarr:before, body div.tagline span.flair.flair-barr:before, body div.tagline span.flair.flair-96BrianRobison:before, body div.tagline span.flair.flair-96BrianRobison:before, body div.tagline span.flair.flair-97EversonGriffen:before, body div.tagline span.flair.flair-98LinvalJoseph:before, body div.tagline span.flair.flair-linval:before, body div.tagline span.flair.flair-gedeon:before{
+content: "";
+width: 100px;
+height: 100%;
+position: fixed;
+z-index:-2;
+top: 0;
+left: 0;
+background-image:url(%%SideBackgroundDefense%%);
+}
+
+body div.tagline span.flair.flair-22HarrisonSmith:after, body div.tagline span.flair.flair-26TraeWaynes:after, body div.tagline span.flair.flair-29XavierRhodes:after, body div.tagline span.flair.flair-54EricKendricks:after, body div.tagline span.flair.flair-55AnthonyBarr:after, body div.tagline span.flair.flair-barr:after, body div.tagline span.flair.flair-96BrianRobison:after, body div.tagline span.flair.flair-96BrianRobison:after, body div.tagline span.flair.flair-97EversonGriffen:after, body div.tagline span.flair.flair-98LinvalJoseph:after, body div.tagline span.flair.flair-linval:after, body div.tagline span.flair.flair-gedeon:after{
+content: "";
+width: 100px;
+height: 100%;
+position: fixed;
+z-index:-2;
+top: 0;
+right: 0;
+background-image:url(%%SideBackgroundDefense%%);
+}
+
+body div.tagline span.flair.flair-00Zimmer:before, body div.tagline span.flair.flair-01:before, body div.tagline span.flair.flair-02:before, body div.tagline span.flair.flair-03:before, body div.tagline span.flair.flair-04:before, body div.tagline span.flair.flair-06:before, body div.tagline span.flair.flair-07:before, body div.tagline span.flair.flair-08:before, body div.tagline span.flair.flair-09:before, body div.tagline span.flair.flair-10:before, body div.tagline span.flair.flair-11LaquonTreadwell:before, body div.tagline span.flair.flair-12:before, body div.tagline span.flair.flair-12:before, body div.tagline span.flair.flair-13:before, body div.tagline span.flair.flair-15:before, body div.tagline span.flair.flair-16:before, body div.tagline span.flair.flair-17KendallWright:before, body div.tagline span.flair.flair-18JeffLocke:before, body div.tagline span.flair.flair-19AdamThielen:before, body div.tagline span.flair.flair-20:before, body div.tagline span.flair.flair-23TerranceNewman:before, body div.tagline span.flair.flair-24:before, body div.tagline span.flair.flair-25:before,  body div.tagline span.flair.flair-27:before, body div.tagline span.flair.flair-30:before,  body div.tagline span.flair.flair-32:before, body div.tagline span.flair.flair-33:before, body div.tagline span.flair.flair-34:before, body div.tagline span.flair.flair-35MarcusSherels:before, body div.tagline span.flair.flair-36:before, body div.tagline span.flair.flair-37:before, body div.tagline span.flair.flair-38:before, body div.tagline span.flair.flair-39:before, body div.tagline span.flair.flair-40:before, body div.tagline span.flair.flair-41:before, body div.tagline span.flair.flair-42:before, body div.tagline span.flair.flair-43:before, body div.tagline span.flair.flair-44:before, body div.tagline span.flair.flair-45:before, body div.tagline span.flair.flair-46:before, body div.tagline span.flair.flair-47:before, body div.tagline span.flair.flair-48:before, body div.tagline span.flair.flair-49:before, body div.tagline span.flair.flair-50:before, body div.tagline span.flair.flair-51:before, body div.tagline span.flair.flair-52:before, body div.tagline span.flair.flair-53:before, body div.tagline span.flair.flair-56:before, body div.tagline span.flair.flair-57:before, body div.tagline span.flair.flair-58:before, body div.tagline span.flair.flair-59:before, body div.tagline span.flair.flair-60:before, body div.tagline span.flair.flair-61:before, body div.tagline span.flair.flair-62:before, body div.tagline span.flair.flair-63:before, body div.tagline span.flair.flair-64:before, body div.tagline span.flair.flair-65:before, body div.tagline span.flair.flair-66:before, body div.tagline span.flair.flair-67:before, body div.tagline span.flair.flair-68:before, body div.tagline span.flair.flair-69JaredAllen:before, body div.tagline span.flair.flair-70JimMarshall:before, body div.tagline span.flair.flair-71:before, body div.tagline span.flair.flair-72:before, body div.tagline span.flair.flair-73:before, body div.tagline span.flair.flair-74:before, body div.tagline span.flair.flair-75:before, body div.tagline span.flair.flair-76:before, body div.tagline span.flair.flair-77:before, body div.tagline span.flair.flair-78:before, body div.tagline span.flair.flair-79:before, body div.tagline span.flair.flair-80CrisCarter:before, body div.tagline span.flair.flair-81:before, body div.tagline span.flair.flair-83:before, body div.tagline span.flair.flair-84RandyMoss:before, body div.tagline span.flair.flair-85:before, body div.tagline span.flair.flair-86:before, body div.tagline span.flair.flair-87:before, body div.tagline span.flair.flair-88AlanPage:before, body div.tagline span.flair.flair-89:before, body div.tagline span.flair.flair-90:before, body div.tagline span.flair.flair-91:before, body div.tagline span.flair.flair-92:before, body div.tagline span.flair.flair-93JohnRandle:before, body div.tagline span.flair.flair-94:before, body div.tagline span.flair.flair-95:before, body div.tagline span.flair.flair-99DanielleHunter:before, body div.tagline span.flair.flair-bears:before, body div.tagline span.flair.flair-bengals:before, body div.tagline span.flair.flair-bills:before, body div.tagline span.flair.flair-broncos:before, body div.tagline span.flair.flair-browns:before, body div.tagline span.flair.flair-buccaneers:before, body div.tagline span.flair.flair-cardinals:before, body div.tagline span.flair.flair-chargers:before, body div.tagline span.flair.flair-chiefs:before, body div.tagline span.flair.flair-colts:before, body div.tagline span.flair.flair-cowboys:before, body div.tagline span.flair.flair-dolphins:before, body div.tagline span.flair.flair-eagles:before, body div.tagline span.flair.flair-falcons:before, body div.tagline span.flair.flair-fortyniners:before, body div.tagline span.flair.flair-giants:before, body div.tagline span.flair.flair-jaguars:before, body div.tagline span.flair.flair-jets:before, body div.tagline span.flair.flair-lions:before, body div.tagline span.flair.flair-packers:before, body div.tagline span.flair.flair-panthers:before, body div.tagline span.flair.flair-patriots:before, body div.tagline span.flair.flair-raiders:before, body div.tagline span.flair.flair-rams:before, body div.tagline span.flair.flair-ravens:before, body div.tagline span.flair.flair-redskins:before, body div.tagline span.flair.flair-saints:before, body div.tagline span.flair.flair-seahawks:before, body div.tagline span.flair.flair-steelers:before, body div.tagline span.flair.flair-texans:before, body div.tagline span.flair.flair-titans:before, body div.tagline span.flair.flair-vikings:before, body div.tagline span.flair.flair-zznfl:before{
+content: "";
+width: 100px;
+height: 100%;
+position: fixed;
+z-index:-2;
+top: 0;
+left: 0;
+background-image:url(%%SideBackgroundDefense%%);
+background-position: 1400px 0;
+}
+
+body div.tagline span.flair.flair-00Zimmer:after, body div.tagline span.flair.flair-01:after, body div.tagline span.flair.flair-02:after, body div.tagline span.flair.flair-03:after, body div.tagline span.flair.flair-04:after, body div.tagline span.flair.flair-06:after, body div.tagline span.flair.flair-07:after, body div.tagline span.flair.flair-08:after, body div.tagline span.flair.flair-09:after, body div.tagline span.flair.flair-10:after, body div.tagline span.flair.flair-11LaquonTreadwell:after, body div.tagline span.flair.flair-12:after, body div.tagline span.flair.flair-12:after, body div.tagline span.flair.flair-13:after, body div.tagline span.flair.flair-15:after, body div.tagline span.flair.flair-16:after, body div.tagline span.flair.flair-17KendallWright:after, body div.tagline span.flair.flair-18JeffLocke:after, body div.tagline span.flair.flair-19AdamThielen:after, body div.tagline span.flair.flair-20:after, body div.tagline span.flair.flair-23TerranceNewman:after, body div.tagline span.flair.flair-24:after, body div.tagline span.flair.flair-25:after,  body div.tagline span.flair.flair-27:after, body div.tagline span.flair.flair-30:after,  body div.tagline span.flair.flair-32:after, body div.tagline span.flair.flair-33:after, body div.tagline span.flair.flair-34:after, body div.tagline span.flair.flair-35MarcusSherels:after, body div.tagline span.flair.flair-36:after, body div.tagline span.flair.flair-37:after, body div.tagline span.flair.flair-38:after, body div.tagline span.flair.flair-39:after, body div.tagline span.flair.flair-40:after, body div.tagline span.flair.flair-41:after, body div.tagline span.flair.flair-42:after, body div.tagline span.flair.flair-43:after, body div.tagline span.flair.flair-44:after, body div.tagline span.flair.flair-45:after, body div.tagline span.flair.flair-46:after, body div.tagline span.flair.flair-47:after, body div.tagline span.flair.flair-48:after, body div.tagline span.flair.flair-49:after, body div.tagline span.flair.flair-50:after, body div.tagline span.flair.flair-51:after, body div.tagline span.flair.flair-52:after, body div.tagline span.flair.flair-53:after, body div.tagline span.flair.flair-56:after, body div.tagline span.flair.flair-57:after, body div.tagline span.flair.flair-58:after, body div.tagline span.flair.flair-59:after, body div.tagline span.flair.flair-60:after, body div.tagline span.flair.flair-61:after, body div.tagline span.flair.flair-62:after, body div.tagline span.flair.flair-63:after, body div.tagline span.flair.flair-64:after, body div.tagline span.flair.flair-65:after, body div.tagline span.flair.flair-66:after, body div.tagline span.flair.flair-67:after, body div.tagline span.flair.flair-68:after, body div.tagline span.flair.flair-69JaredAllen:after, body div.tagline span.flair.flair-70JimMarshall:after, body div.tagline span.flair.flair-71:after, body div.tagline span.flair.flair-72:after, body div.tagline span.flair.flair-73:after, body div.tagline span.flair.flair-74:after, body div.tagline span.flair.flair-75:after, body div.tagline span.flair.flair-76:after, body div.tagline span.flair.flair-77:after, body div.tagline span.flair.flair-78:after, body div.tagline span.flair.flair-79:after, body div.tagline span.flair.flair-80CrisCarter:after, body div.tagline span.flair.flair-81:after, body div.tagline span.flair.flair-83:after, body div.tagline span.flair.flair-84RandyMoss:after, body div.tagline span.flair.flair-85:after, body div.tagline span.flair.flair-86:after, body div.tagline span.flair.flair-87:after, body div.tagline span.flair.flair-88AlanPage:after, body div.tagline span.flair.flair-89:after, body div.tagline span.flair.flair-90:after, body div.tagline span.flair.flair-91:after, body div.tagline span.flair.flair-92:after, body div.tagline span.flair.flair-93JohnRandle:after, body div.tagline span.flair.flair-94:after, body div.tagline span.flair.flair-95:after, body div.tagline span.flair.flair-99DanielleHunter:after, body div.tagline span.flair.flair-bears:after, body div.tagline span.flair.flair-bengals:after, body div.tagline span.flair.flair-bills:after, body div.tagline span.flair.flair-broncos:after, body div.tagline span.flair.flair-browns:after, body div.tagline span.flair.flair-buccaneers:after, body div.tagline span.flair.flair-cardinals:after, body div.tagline span.flair.flair-chargers:after, body div.tagline span.flair.flair-chiefs:after, body div.tagline span.flair.flair-colts:after, body div.tagline span.flair.flair-cowboys:after, body div.tagline span.flair.flair-dolphins:after, body div.tagline span.flair.flair-eagles:after, body div.tagline span.flair.flair-falcons:after, body div.tagline span.flair.flair-fortyniners:after, body div.tagline span.flair.flair-giants:after, body div.tagline span.flair.flair-jaguars:after, body div.tagline span.flair.flair-jets:after, body div.tagline span.flair.flair-lions:after, body div.tagline span.flair.flair-packers:after, body div.tagline span.flair.flair-panthers:after, body div.tagline span.flair.flair-patriots:after, body div.tagline span.flair.flair-raiders:after, body div.tagline span.flair.flair-rams:after, body div.tagline span.flair.flair-ravens:after, body div.tagline span.flair.flair-redskins:after, body div.tagline span.flair.flair-saints:after, body div.tagline span.flair.flair-seahawks:after, body div.tagline span.flair.flair-steelers:after, body div.tagline span.flair.flair-texans:after, body div.tagline span.flair.flair-titans:after, body div.tagline span.flair.flair-vikings:after, body div.tagline span.flair.flair-zznfl:after{
+content: "";
+width: 100px;
+height: 100%;
+position: fixed;
+z-index:-2;
+top: 0;
+right: 0;
+background-image:url(%%SideBackgroundDefense%%);
+background-position: 1100px 0;
+}
+
+/*=======Header=======*/
+
+#header-bottom-left {
+    background-color: #FFFFFF;
+    background-image: url(%%skol-bunyan%%);
+    height: 285px;
+    font-size: inherit !important;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+/*=======Header Flex=======
+
+#header {overflow: inherit !important;}
+
+#header-bottom-left {
+    background-color: #FFFFFF;
+    background-image: url(%%headerweek6%%);
+    height: 285px;
+    font-size: inherit !important;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+*/
+
+#header { border-bottom: 1px #000000; }
+
+
+/*=======Front Page Links=======*/
+
+.link {
+    margin-bottom: -1px;
+}
+
+.linklisting .thing {
+    border-left: 3px #37265c solid;
+    padding: 20px;
+    background: transparent;
+    overflow: hidden;
+}
+
+.listing-page .linklisting .thing:hover {
+    border-left: 3px #fdb530 solid;
+}
+
+.res-nightmode .linklisting .thing {
+    border: 1px #E7E6E6 solid;
+    border-left: 3px #777 solid;
+    padding: 10px;
+    background: #333333;
+    overflow: hidden;
+}
+
+.link.flat-list buttons {
+    margin-bottom: 10px;
+}
+
+p.tagline{
+    padding-top: 6px;
+}
+
+ul.flat-list.buttons {
+    padding-top: 8px;
+}
+
+.listing-page .link .flair {
+    display: none;
+}
+
+/* –––––––Sticky Posts––––––– */
+
+.stickied .title {
+    color: #37265c!important;
+}
+.stickied {
+    background-color:#EEEEEE!important;
+}
+
+.res-nightmode .stickied .title {
+    color: #F0BF00!important;
+}
+
+.res-nightmode .stickied {
+    background-color:#333333!important;
+}
+
+.sitetable[id$="52m7rc"] .down { display: none; }
+
+res-nightmode .sticked {
+    background: #252525;
+}
+
+/*–––––––Self Post–––––––*/
+
+.link .usertext .md {
+    color: #222;
+    background-color: #FFF;
+    border: 1px solid rgb(204, 204, 204);
+    text-align: left;
+}
+
+.res .link .usertext .md {
+    color: #222;
+    border: 1px solid rgb(204, 204, 204);
+    text-align: left
+}
+.res-nightmode .commentarea {
+    background: black;
+}
+
+
+
+/*–––––––domain name–––––––*/
+
+.link .title .domain a {
+    font-size: 10px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.link .title .domain a:hover {
+    color: #37265c;
+}
+
+.link .title .domain {
+    font-size: 0;
+    font-weight: normal;
+}
+
+.link .title .domain::before {
+    content: "|";
+    font-size: 13px;
+}
+
+.linkinfo {
+    background: #ffffff;
+    color: #37263c;
+    border: 1px;
+}
+
+/*–––––––Announcement Sticky Note–––––––*/
+
+body > .content:before {
+    font-family: verdana, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000000;
+    background-color: #F0F0F0;
+    padding: 6px 0px 6px 5px;
+    display: block;
+    overflow: hidden;
+}
+
+/*=======Side=======*/
+
+div.side {
+    margin-top: 6px;
+    padding: 390px 0px 0px 0px; /* Change the first number based on the height of the sidebar image */
+    background: top right 0px no-repeat url(%%kirkgrate%%) !important;
+    background-size: 50%;
+}
+
+div.side:before {
+    font-weight: 600;
+    font-size: 1.3em;
+    content: '      '; /* Text under sidebar goes here */
+}
+
+div.side .ad-container {
+    min-height: unset;
+}
+
+div.side .titlebox h1.redditname a {
+color: #37265c;
+text-transform: none;
+font-weight: normal;
+font-size: 0px;
+padding-left: 36px;
+}
+
+div.side .titlebox h1.redditname a:after {
+color: #37265c; /*red*/
+background-color: transparent;
+font-size: 25px;
+font-family: verdana, sans-serif;
+content: "Minnesota Vikings";
+}
+
+a.add {
+background: #37265c!important;
+margin-left: 30px;
+}
+
+a.remove {
+background: #fdb530!important;
+margin-left: 30px;
+}
+
+span.RESshortcut {
+background: #37265c!important;
+color: #ffffff;
+}
+
+.REStoggle {
+background: #37265c!important;
+}
+
+.subscribe-button {
+margin-top: 4px;
+margin-left: -8px;
+}
+
+.titlebox > div:nth-child(2) {
+padding-left: 75px!important;
+}
+
+form.toggle:nth-child(6) {
+display: none;
+}
+
+div.tagline {
+position: relative;
+text-align: center;
+margin-left: 0!important;
+}
+
+div.leavemoderator, form.toggle.leavecontributor-button, form.toggle.flairtoggle{
+background: transparent;
+}
+/*–––––––Submit Box–––––––*/
+
+.morelink
+{
+font-weight:normal;
+letter-spacing:0;
+background:#37265c;
+border: 2px;
+-moz-border-radius:2px;
+-webkit-border-radius:2px;
+-o-border-radius:2px;
+-ms-border-radius:2px;
+-khtml-border-radius:2px;
+border-radius:2px;
+height: 30px;
+line-height: 30px;
+overflow: hidden;
+color: white;
+}
+
+.morelink:hover{
+background: #fdb530;
+background-color: #fdb530;
+border-color: #fdb530;
+-webkit-transition: .5s;
+-moz-transition: .5s;
+transition: .5s ease;
+}
+
+.morelink .nub { display: none; }
+
+.morelink {
+color:#FFF;
+font-family:Verdana, Arial, sans-serif;
+font-size:16px;
+width: 145px;
+}
+
+.morelink a, .morelink a:hover{ color: white; }
+
+.sidebox.submit-link .morelink::before {
+display: block;
+clear: none;
+content: "Submit a Link";
+font-size: 95%;
+}
+
+.sidebox.submit-text .morelink::before {
+display: block;
+clear: none;
+content: "Submit a Self Post";
+font-size: 90%;
+}
+
+.sidebox.submit .morelink a {
+position: absolute;
+top: 0;
+padding-left: 1000px;
+font-size: 0px;
+text-align: right;
+color: #56a6f7;
+}
+
+.sidebox.submit.submit-link { width: 150px; margin-left: 2px; }
+.sidebox.submit.submit-text { margin-top: -42px; margin-left: 153px; }
+.sidebox.create { display: none; }
+.sidebox.submit.disabled { display: none;}
+
+/*–––––––Search Bar–––––––*/
+
+#search {
+margin-top: 0px;
+}
+
+#search input[type="text"]:hover,
+#search input[type="text"]:focus {
+border: 3px solid #37265c;
+outline: none;
+}
+#search input[type="text"] {
+border: 1px solid #DDD!important;
+background-repeat: no-repeat;
+outline: none;
+font-size: 14px;
+padding: 5px 0 5px 10px;
+color: #AAA;
+}
+#searchexpando {
+background-color: #E7E6E6 !important;
+border-color: #E7E6E6;
+-moz-border-radius: 0px!important;
+-webkit-border-radius: 0px!important;
+-o-border-radius: 0px!important;
+-ms-border-radius: 0px!important;
+-khtml-border-radius: 0px!important;
+border-radius: 0px !important;
+}
+
+#search input[type="text"]:focus {
+outline: 1px solid #37265c!important;
+}
+
+
+
+/*=======Tabs & Menu=======*/
+
+/*–––––––Menu–––––––*/
+
+#sr-header-area {
+background: url(%%overlay%%) !important;
+border-bottom: none;
+box-shadow: 0 0 7px #444;
+left: 0;
+padding: 3px 0;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 9001;
+}
+
+#srLeftContainer, #RESStaticShortcuts, #RESShortcuts, #srDropdown {
+display: inline;
+float: left;
+position: relative;
+z-index: 5;
+max-width: 94%;
+}
+
+#sr-header-area .dropdown.srdrop {
+padding-left: 10px !important;
+}
+
+#sr-header-area .drop-choices {
+background: #fafafa;
+color: black;
+}
+#sr-header-area .drop-choices.srdrop a.choice {
+color: black;
+}
+#sr-header-area a,
+#sr-header-area .srSep,
+#sr-header-area .dropdown.srdrop .selected {
+color: white;
+}
+
+#RESShortcutsSort, #RESShortcutsAdd, #RESShortcutsLeft, #RESShortcutsRight {
+background: transparent !important;
+color: #ffffff!important;
+padding-bottom: 5px;
+}
+
+#RESShortcutsEditContainer {
+background: transparent !important;
+color: #ffffff!important;
+padding-bottom: 7px;
+}
+
+
+#sr-more-link {
+color: black;
+background-color: #000000;
+position: absolute;
+right: 0px;
+top: 0px;
+padding-bottom: 3px;
+font-weight: bold;
+margin: 0px;
+}
+
+/*–––––––Tab menu–––––––*/
+
+#header .tabmenu {
+display: block;
+position: relative;
+vertical-align: bottom;
+text-align: left;
+white-space: nowrap;
+font-size: small;
+font-family: sans-serif;
+z-index: 1;
+top: 250px;
+}
+
+#header-bottom-left ul.tabmenu li a, #header-bottom-left li.selected a {
+border-bottom: none;
+-moz-border-radius-topleft: 3px !important;
+-moz-border-radius-topright: 3px !important
+}
+
+#header-bottom-left .tabmenu li a {
+background: transparent !important;
+opacity: 1;
+font-weight: bold;
+color: #FFFFFF;
+font-size: x-small;
+text-transform: uppercase;
+text-shadow: none;
+}
+
+#header-bottom-left .tabmenu li a:hover {
+background: #FFFFFF;
+opacity: 1;
+border-bottom: 0px solid #fff !important;
+border-top: none;
+border-left: none;
+border-right: none;
+text-decoration: underline !important;
+color: #FFFFFF !important;
+}
+
+#header-bottom-left .tabmenu li.selected a {
+opacity: 1;
+border-bottom: 0px solid #4e2683 !important;
+border-top: none;
+border-left: none;
+border-right: none;
+text-decoration: underline !important;
+color: #FFC52F !important;
+}
+
+#header-bottom-left ul.tabmenu li a[href="http://www.reddit.com/r/minnesotavikings/top/"]{margin-left: -10px;}
+#header-bottom-left ul.tabmenu li a#viewImagesButton {margin-left: -15px;}
+#header-bottom-left ul.tabmenu li a[href="http://www.reddit.com/r/minnesotavikings/gilded/"],
+#header-bottom-left ul.tabmenu li a[href="http://www.reddit.com/r/minnesotavikings/ads/"],
+#header-bottom-left ul.tabmenu li a[href="http://www.reddit.com/r/minnesotavikings/rising/"],
+#header-bottom-left ul.tabmenu li a[href="http://www.reddit.com/r/minnesotavikings/wiki/"],
+#header-bottom-left ul.tabmenu li a[href="http://www.reddit.com/r/minnesotavikings/controversial/"],
+#header-bottom-left ul.tabmenu li a[href="http://www.reddit.com/r/minnesotavikings/promoted/"],
+#header-bottom-left ul.tabmenu li a[href="http://www.reddit.com/r/minnesotavikings/related/"]{
+display: none;
+}
+
+#header-bottom-left ul.tabmenu li a[href="https://www.reddit.com/r/minnesotavikings/top/"]{margin-left: -10px;}
+#header-bottom-left ul.tabmenu li a#viewImagesButton {margin-left: -15px;}
+#header-bottom-left ul.tabmenu li a[href="https://www.reddit.com/r/minnesotavikings/gilded/"],
+#header-bottom-left ul.tabmenu li a[href="https://www.reddit.com/r/minnesotavikings/ads/"],
+#header-bottom-left ul.tabmenu li a[href="https://www.reddit.com/r/minnesotavikings/rising/"],
+#header-bottom-left ul.tabmenu li a[href="https://www.reddit.com/r/minnesotavikings/wiki/"],
+#header-bottom-left ul.tabmenu li a[href="https://www.reddit.com/r/minnesotavikings/controversial/"],
+#header-bottom-left ul.tabmenu li a[href="https://www.reddit.com/r/minnesotavikings/promoted/"]{
+display: none;
+}
+
+/*–––––––Button–––––––*/
+
+button, #search input[type='submit'], .wiki-page .wiki-page-content .wiki_button {
+padding: 0px 8px 1px 8px;
+background-color: #ffffff;
+border: 1px solid #d4d4d4;
+border-radius: 2px;
+-webkit-box-shadow: 0 1px 0 #e2e0e0;
+box-shadow: 0 1px 0 #e2e0e0;
+color: #737373 !important;
+text-transform: capitalize;
+font-weight: bold;
+line-height: 26px;
+cursor: default;
+}
+
+button:hover, #search input[type='submit']:hover, .wiki-page .wiki-page-content .wiki_button:hover {
+padding-bottom: 0px;
+border-color: #bababa;
+border-bottom-width: 2px;
+color: #333 !important;
+}
+
+button:active, #search input[type='submit']:active, .wiki-page .wiki-page-content .wiki_button:active {
+padding-bottom: 0px;
+background-color: #e5e5e5;
+border-color: #a7a7a7;
+border-top-width: 2px;
+border-bottom-width: 1px;
+-webkit-box-shadow: none;
+box-shadow: none;
+color: #333 !important;
+line-height: 25px;
+}
+
+/*–––––––Navigation Toolbar–––––––*/
+
+#header-bottom-right {
+position: absolute;
+right: 10px;
+top: 263px;
+background-color: transparent;
+z-index: 9002;
+}
+
+span.user a, span.userkarma, form.logout a, li a.pref-lang, a#mailCount  { color: #FFFFFF; }
+
+.res-navTop #header-bottom-right {
+top: 263px;
+right: 10px;
+background-color: transparent;
+z-index: 9002;
+}
+
+div#header-bottom-right div#userbarToggle {
+color: #FFFFFF;
+background-color: transparent;
+border-right: 0px solid #fff
+}
+
+
+/*=======Comment Boxes=======*/
+
+.commentarea {
+padding: 5px 0 10px;
+margin-top: -5px;
+background: #FFF;
+}
+
+.menuarea .spacer .drop-choices.lightdrop a.choice, .commentarea .menuarea form {
+padding: 0.5px;
+font-size: 14px;
+color: #00397F;
+}
+
+.menuarea .spacer .drop-choices.lightdrop a.choice:hover, .commentarea .menuarea form:hover {
+background-color: #00397F;
+color: #fff;
+text-decoration: none;
+}
+
+.menuarea .dropdown.lightdrop .selected {
+background-image: none;
+color: #3b3b3b;
+text-decoration: none;
+opacity: .4;
+cursor: pointer;
+}
+
+.menuarea .dropdown.lightdrop .selected:hover {color: #00397F;}
+
+.menuarea .dropdown.lightdrop .selected:after {
+content: " =";
+vertical-align: middle;
+opacity: 0.5;
+}
+
+.md p {
+line-height:20px;
+}
+
+.md a:hover {
+color: #37265c;
+text-shadow:#fff 0px 1px 0px;
+}
+
+.md table {
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+font-size: 10px;
+margin: 2px 0 20px 0;
+width:100%;
+color: #000000;
+}
+
+.md table th {
+border-top: none;
+border-left: 1px solid #fff;
+border-bottom: none;
+border-right: 1px solid #fff;
+color: #ffffff;
+background: #37265c;
+font-size: 110%;
+font-weight: bold;
+padding: .5em;
+text-align: center;
+text-shadow: 0px 1px 0 #000;
+}
+.md table tr:nth-child(even) {
+background-color: #f7f7f7;
+}
+.md table tr:hover {
+background-color: #E3E3E3;
+}
+.md table tr:last-child {
+border-bottom:solid 1px #ccc;
+}
+.md table td {
+border-top: none;
+border-bottom: 1px solid #E8E8E8;
+height: 20px;
+padding: 5px;
+vertical-align: middle;
+}
+
+.res-nightmode .md table tr:nth-child(even) {
+    background: #464343;
+}
+
+/*=======Extras=======*/
+
+/*----Upvote Arrow----
+.arrow.up {
+    background-image: url(%%votingarrows%%) !important;
+    background-repeat: no-repeat;
+    background-position: 0px -39px !important;
+    height: 21px;
+}
+
+.arrow.upmod {
+    background-image: url(%%votingarrows%%) !important;
+    background-repeat: no-repeat;
+    background-position: 0px 0px !important;
+    height: 21px;
+}
+*/
+/*----Downvote Arrow----
+.arrow.down {
+    background-image: url(%%votingarrows%%) !important;
+    background-repeat: no-repeat;
+    background-position: 0px -21px !important;
+    height: 17px;
+}
+
+.arrow.downmod {
+    background-image: url(%%votingarrows%%) !important;
+    background-repeat: no-repeat;
+    background-position: 0px -60px !important;
+    height: 17px;
+}
+*/
+/*-------Shaky Text--------*/
+a[href="/intensify"] {
+  color:#000000;
+  pointer-events: none;
+  animation:intensify .1s steps(5) infinite;
+  -webkit-animation:intensify .1s steps(5) infinite;
+  -moz-animation:intensify .1s steps(5) infinite
+}
+
+a[href="/scream"] {
+  font-size: xx-large;
+  font-weight: bolder;
+  color:#000000;
+  pointer-events: none;
+  animation:intensify .1s steps(5) infinite;
+  -webkit-animation:intensify .1s steps(5) infinite;
+  -moz-animation:intensify .1s steps(5) infinite
+}
+
+@keyframes intensify {
+  0% { margin-left: 0px }
+  100% { margin-left: 2px }
+}
+
+@-webkit-keyframes intensify {
+  0% { margin-left: 0px }
+  100% { margin-left: 2px }
+}
+
+@-moz-keyframes intensify {
+  0% { margin-left: 0px }
+  100% { margin-left: 2px }
+}
+
+/*–––––––Submit Page–––––––*/
+
+form#newlink.submit.content {
+margin-top: 40px;
+}
+
+.submit-page .infobar {
+margin-top: 0px;
+margin-bottom: 8px;
+padding: 10px 10px 10px 10px;
+color: #3b3b3b;
+text-align: center;
+text-indent: -9999px;
+font-size: 0px;
+}
+
+.formtabs-content .infobar:before {
+display: block;
+text-indent: 0px;
+font-size: 16px;
+}
+
+.submit-page .tabmenu li a {margin:0px;}
+.submit-page ul.tabmenu.formtab {padding-left: 0px;width: 500px;text-align:center; }
+.formtabs-content {padding-top: 0px;border-top: 4px solid #00397F;}
+
+.submit-page .tabmenu.formtab a {
+padding: 5px 55px 0px 55px;
+width: 100px;
+background-color: white;
+border: 0px solid;
+color: #00397F;
+text-align: center;
+font-weight:normal;
+font-size: 14px;
+
+}
+
+.submit-page .tabmenu li a:hover {color: #333;}
+
+.submit-page .tabmenu.formtab .selected a {
+padding: 5px 60px 0px 60px;
+background-color: #00397F;
+color: #fff;
+font-size: 18px;
+}
+
+.roundfield {
+padding: 10px 10px 10px 10px;
+color: #707070;
+}
+
+.submit-page textarea, .roundfield input[type=url], .roundfield input[type=text], .login-form-side input[type=text], .login-form-side input[type=password],
+.linefield textarea, .linefield input[type="text"], .flairlist .flaircell input[type="text"], .linkinfo .shortlink input, .search-page #search input[type=text] {
+margin: 0;
+padding: 5px;
+border: 1px solid #d9d9d9;
+border-top: 1px solid #4C4C4C;
+-webkit-box-shadow: none;
+box-shadow: none;
+color: #333;
+font-size: 100%;
+}
+
+.submit-page textarea:hover, .roundfield input[type=url]:hover, .roundfield input[type=text]:hover, .login-form-side input[type=text]:hover, .login-form-side input[type=password]:hover,
+.linefield textarea:hover, .linefield input[type="text"]:hover, .flairlist .flaircell input[type="text"]:hover, .linkinfo .shortlink input:hover, .search-page #search input[type=text] {border: 1px solid #bebebe;}
+
+.submit-page textarea:focus, .roundfield input[type=url]:focus, .roundfield input[type=text]:focus, .login-form-side input[type=text]:focus, .login-form-side input[type=password]:focus,
+.linefield textarea:focus, .linefield input[type="text"]:focus, .flairlist .flaircell input[type="text"]:focus, .linkinfo .shortlink input:focus, .search-page #search input[type=text] {border: 1px solid #4d90fe;color: #000;}
+
+.linefield .usertext-edit textarea {height: 500px;}
+
+.submit-page .content textarea, .submit-page .content input[type=url], .submit-page .content input[type=text] {width: 488px;}
+
+.submit-page .content button {
+margin-bottom: 30px;
+margin-left: 0px;
+padding: 10px 10px 10px 10px;
+width: 522px;
+color: #707070 !important;
+text-align: center;
+cursor: pointer;
+border: 0px;
+border-bottom: 3px solid #E5E5E5;
+-webkit-transition: .5s;
+-moz-transition: .5s;
+transition: .5s ease;
+}
+
+.submit-page button:hover {
+background-color: #00397F;
+color: white !important;
+border-bottom: 4px solid #477ADB;
+}
+
+.submit-page button:active {
+background-color: #315fb2;
+border-bottom-color: #315fb2;
+}
+
+.submit-page h1 {display: none;}
+.submit-page .side h1 {display: inherit;}
+
+.content.submit .info-notice {
+margin: 0px 0px 4px 0px;
+padding: 20px 10px 20px 10px;
+color: #707070;
+text-align: center;
+border: 0px;
+border-bottom: 3px solid #E5E5E5;
+}
+
+.content.submit .info-notice a {
+text-decoration: none;
+font-size: 120%;
+}
+
+.content.submit .info-notice a:hover {text-decoration: underline;}
+.thing.spam {border-color: #F3B9B9; background-color: #fff;margin-right: 320px;}
+#file {margin: 10px;}
+.submit-page .gray, #suggested-reddits {display: none;}
+.submit-page form .spacer+.spacer {margin: 8px 0px;}
+
+#url-field button{
+margin: 10px 0 0 0;
+width: 500px;
+-webkit-transition: .5s;
+-moz-transition: .5s;
+transition: .5s ease;
+}
+
+/*–––––––Link Info–––––––*/
+
+.linkinfo{
+border: #ccc solid 1px;
+border-left: none;
+border-right: none;
+padding: 20px;
+margin-bottom: 20px;
+background: #F0F0F0;
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+}
+.linkinfo div.date{
+text-align: center;
+}
+.linkinfo div.date span{
+display: none;
+}
+.linkinfo div.date time:before{
+display: inline-block;
+content: "This post was submitted on ";
+padding-right:4px;
+}
+.linkinfo div.score{
+display: block;
+padding: 10px 0;
+text-align: center;
+line-height: 22px;
+vertical-align: middle;
+}
+.linkinfo .score .number {
+font-size: 22px;
+font-weight: bold;
+line-height: 22px;
+vertical-align: middle;
+}
+.linkinfo .score .word {
+font-size: 22px;
+font-weight: normal;
+line-height: 22px;
+vertical-align: bottom;
+padding-right: 10px;
+}
+.linkinfo .upvotes,
+.linkinfo .downvotes {
+display: inline-block;
+width: 138px !important;
+text-align: center;
+font-size: 15px;
+padding: 0 55px;
+}
+.linkinfo .upvotes{
+color:#4F2682;
+}
+.linkinfo .downvotes{
+color:#FFC52F;
+}
+.linkinfo .shortlink{
+display: block;
+padding: 10px 0 0;
+text-align: center;
+}
+
+/*=======Flair & Logos=======*/
+
+/*=Messing with "someone" - replace "someone" with their user name=*/
+
+/*=Sets pretend flair text he can't change=*/
+a[href*="https://www.reddit.com/user/someone" i] ~ span.userattrs:before {
+    content: 'vbullinger is my favorite mod';
+    color: black;
+    padding-right: 5px;
+}
+/*=Hides real flair text=*/
+a[href*="https://www.reddit.com/user/someone" i] ~ span.flair {
+    width: 0px;
+}
+
+/*=====Verified Players======*/
+
+/*========Template=======*/
+.tagline a[href*="https://www.reddit.com/user/[User Name]" i]::after {
+    content: url(%%verified%%);
+    padding-left: 10px;
+}
+
+.tagline a[href*="https://www.reddit.com/user/[User Name]" i]::before {
+    content: ;
+    padding-right: 10px;
+}
+
+/*========End Template=======*/
+
+.flair { 
+    line-height: 25px;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: inherit;
+    color: #000000;
+    padding: 3px 0px 0px 0px;
+    margin-left: 5px;
+    border-width: 0;
+    border: 0px;    background-color: transparent; 
+    background-image: url(%%flair%%);
+    background-repeat: no-repeat;
+} 
+
+.flair, .linkflairlabel {
+    padding-left: 35px;
+}
+
+.title .linkflairlabel {
+    padding-left: 0px;
+    max-width: 300px;
+    overflow: visible;
+}
+ 
+.flair-00Zimmer { height: 30px; background-position: -5px -5px; } 
+.flair-01 { height: 30px; background-position: -5px -45px; } 
+.flair-02 { height: 30px; background-position: -5px -85px; } 
+.flair-03 { height: 30px; background-position: -5px -125px; } 
+.flair-04 { height: 30px; background-position: -5px -165px; }
+.flair-05 { height: 30px; background-position: -5px -205px; } 
+.flair-06 { height: 30px; background-position: -5px -245px; } 
+.flair-07 { height: 30px; background-position: -5px -285px; } 
+.flair-08KirkCousins { height: 30px; background-position: -5px -325px; } 
+.flair-09 { height: 30px; background-position: -5px -365px; } 
+.flair-10 { height: 30px; background-position: -5px -405px; } 
+.flair-11LaquonTreadwell { height: 30px; background-position: -5px -445px; } 
+.flair-12 { height: 30px; background-position: -5px -485px; } 
+.flair-13 { height: 30px; background-position: -5px -525px; } 
+.flair-14StefonDiggs { height: 30px; background-position: -5px -565px; } 
+.flair-15 { height: 30px; background-position: -5px -605px; } 
+.flair-16 { height: 30px; background-position: -5px -645px; } 
+.flair-17KendallWright { height: 30px; background-position: -5px -685px; } 
+.flair-18JeffLocke { height: 30px; background-position: -5px -725px; } 
+.flair-19AdamThielen { height: 30px; background-position: -5px -765px; } 
+.flair-20 { height: 30px; background-position: -5px -805px; } 
+.flair-21 { height: 30px; background-position: -5px -845px; } 
+.flair-22HarrisonSmith { height: 30px; background-position: -5px -885px; } 
+.flair-23TerranceNewman { height: 30px; background-position: -5px -925px; } 
+.flair-24 { height: 30px; background-position: -5px -965px; } 
+.flair-25 { height: 30px; background-position: -5px -1005px; } 
+.flair-26TraeWaynes { height: 30px; background-position: -5px -1045px; } 
+.flair-27 { height: 30px; background-position: -5px -1085px; } 
+.flair-28 { height: 30px; background-position: -5px -1125px; } 
+.flair-29XavierRhodes { height: 30px; background-position: -5px -1165px; } 
+.flair-30 { height: 30px; background-position: -5px -1205px; } 
+.flair-31 { height: 30px; background-position: -5px -1245px; } 
+.flair-32 { height: 30px; background-position: -5px -1285px; } 
+.flair-33DalvinCook { height: 30px; background-position: -5px -1325px; } 
+.flair-34 { height: 30px; background-position: -5px -1365px; } 
+.flair-35MarcusSherels { height: 30px; background-position: -5px -1405px; } 
+.flair-36 { height: 30px; background-position: -5px -1445px; } 
+.flair-37 { height: 30px; background-position: -5px -1485px; } 
+.flair-38 { height: 30px; background-position: -5px -1525px; } 
+.flair-39 { height: 30px; background-position: -5px -1565px; } 
+.flair-40 { height: 30px; background-position: -5px -1605px; } 
+.flair-41 { height: 30px; background-position: -5px -1645px; } 
+.flair-42 { height: 30px; background-position: -5px -1685px; } 
+.flair-43 { height: 30px; background-position: -5px -1725px; } 
+.flair-44 { height: 30px; background-position: -5px -1765px; } 
+.flair-45 { height: 30px; background-position: -5px -1805px; } 
+.flair-46 { height: 30px; background-position: -5px -1845px; } 
+.flair-47 { height: 30px; background-position: -5px -1885px; } 
+.flair-48 { height: 30px; background-position: -5px -1925px; } 
+.flair-49 { height: 30px; background-position: -5px -1965px; } 
+.flair-50 { height: 30px; background-position: -5px -2005px; } 
+.flair-51 { height: 30px; background-position: -5px -2045px; } 
+.flair-52 { height: 30px; background-position: -5px -2085px; } 
+.flair-53 { height: 30px; background-position: -5px -2125px; } 
+.flair-54EricKendricks { height: 30px; background-position: -5px -2165px; } 
+.flair-55AnthonyBarr { height: 30px; background-position: -5px -2205px; } 
+.flair-56 { height: 30px; background-position: -5px -2245px; } 
+.flair-57 { height: 30px; background-position: -5px -2285px; } 
+.flair-58 { height: 30px; background-position: -5px -2325px; } 
+.flair-59 { height: 30px; background-position: -5px -2365px; } 
+.flair-60 { height: 30px; background-position: -5px -2405px; } 
+.flair-61 { height: 30px; background-position: -5px -2445px; } 
+.flair-62 { height: 30px; background-position: -5px -2485px; } 
+.flair-63 { height: 30px; background-position: -5px -2525px; } 
+.flair-64 { height: 30px; background-position: -5px -2565px; } 
+.flair-65 { height: 30px; background-position: -5px -2605px; } 
+.flair-66 { height: 30px; background-position: -5px -2645px; } 
+.flair-67 { height: 30px; background-position: -5px -2685px; } 
+.flair-68 { height: 30px; background-position: -5px -2725px; } 
+.flair-69JaredAllen { height: 30px; background-position: -5px -2765px; } 
+.flair-70JimMarshall { height: 30px; background-position: -5px -2805px; } 
+.flair-71 { height: 30px; background-position: -5px -2845px; } 
+.flair-72 { height: 30px; background-position: -5px -2885px; } 
+.flair-73 { height: 30px; background-position: -5px -2925px; } 
+.flair-74 { height: 30px; background-position: -5px -2965px; } 
+.flair-75 { height: 30px; background-position: -5px -3005px; } 
+.flair-76 { height: 30px; background-position: -5px -3045px; } 
+.flair-77 { height: 30px; background-position: -5px -3085px; } 
+.flair-78 { height: 30px; background-position: -5px -3125px; } 
+.flair-79 { height: 30px; background-position: -5px -3165px; } 
+.flair-80CrisCarter { height: 30px; background-position: -5px -3205px; } 
+.flair-81 { height: 30px; background-position: -5px -3245px; } 
+.flair-82KyleRudolph { height: 30px; background-position: -5px -3285px; } 
+.flair-83 { height: 30px; background-position: -5px -3325px; } 
+.flair-84RandyMoss { height: 30px; background-position: -5px -3365px; } 
+.flair-85 { height: 30px; background-position: -5px -3405px; } 
+.flair-86 { height: 30px; background-position: -5px -3445px; } 
+.flair-87 { height: 30px; background-position: -5px -3485px; } 
+.flair-88AlanPage { height: 30px; background-position: -5px -3525px; } 
+.flair-89 { height: 30px; background-position: -5px -3565px; } 
+.flair-90 { height: 30px; background-position: -5px -3605px; } 
+.flair-91 { height: 30px; background-position: -5px -3645px; } 
+.flair-92 { height: 30px; background-position: -5px -3685px; } 
+.flair-93JohnRandle { height: 30px; background-position: -5px -3725px; } 
+.flair-94 { height: 30px; background-position: -5px -3765px; } 
+.flair-95 { height: 30px; background-position: -5px -3805px; } 
+.flair-96BrianRobison { height: 30px; background-position: -5px -3845px; } 
+.flair-97EversonGriffen { height: 30px; background-position: -5px -3885px; } 
+.flair-98LinvalJoseph { height: 30px; background-position: -5px -3925px; } 
+.flair-99DanielleHunter { height: 30px; background-position: -5px -3965px; } 
+.flair-bears { height: 20px; background-position: -5px -4005px; } 
+.flair-bengals { height: 20px; background-position: -5px -4035px; } 
+.flair-bills { height: 20px; background-position: -5px -4065px; } 
+.flair-broncos { height: 20px; background-position: -5px -4095px; } 
+.flair-browns { height: 20px; background-position: -5px -4125px; } 
+.flair-buccaneers { height: 20px; background-position: -5px -4155px; } 
+.flair-cardinals { height: 20px; background-position: -5px -4185px; } 
+.flair-chargers { height: 20px; background-position: -5px -4215px; } 
+.flair-chiefs { height: 20px; background-position: -5px -4245px; } 
+.flair-colts { height: 20px; background-position: -5px -4275px; } 
+.flair-cowboys { height: 20px; background-position: -5px -4305px; } 
+.flair-dolphins { height: 20px; background-position: -5px -4335px; } 
+.flair-eagles { height: 20px; background-position: -5px -4365px; } 
+.flair-falcons { height: 20px; background-position: -5px -4395px; } 
+.flair-fortyniners { height: 20px; background-position: -5px -4425px; } 
+.flair-giants { height: 20px; background-position: -5px -4455px; } 
+.flair-jaguars { height: 20px; background-position: -5px -4485px; } 
+.flair-jets { height: 20px; background-position: -5px -4515px; } 
+.flair-lions { height: 20px; background-position: -5px -4545px; } 
+.flair-packers { height: 20px; background-position: -5px -4575px; } 
+.flair-panthers { height: 20px; background-position: -5px -4605px; } 
+.flair-patriots { height: 20px; background-position: -5px -4635px; } 
+.flair-raiders { height: 20px; background-position: -5px -4665px; } 
+.flair-rams { height: 20px; background-position: -5px -4695px; } 
+.flair-ravens { height: 20px; background-position: -5px -4725px; } 
+.flair-redskins { height: 20px; background-position: -5px -4755px; } 
+.flair-saints { height: 20px; background-position: -5px -4785px; } 
+.flair-seahawks { height: 20px; background-position: -5px -4815px; } 
+.flair-steelers { height: 20px; background-position: -5px -4845px; } 
+.flair-texans { height: 20px; background-position: -5px -4875px; } 
+.flair-titans { height: 20px; background-position: -5px -4905px; } 
+.flair-vikings { height: 20px; background-position: -5px -4935px; } 
+.flair-zznfl { width: 15px; height: 20px; background-position: -5px -4965px; }
+.flair-alabama { height: 27px; background-position: 0px -4995px; } 
+.flair-alaska { height: 27px; background-position: 0px -5025px; } 
+.flair-arizona { height: 27px; background-position: 0px -5055px; } 
+.flair-arkansas { height: 27px; background-position: 0px -5085px; } 
+.flair-california { height: 27px; background-position: 0px -5115px; } 
+.flair-colorado { height: 27px; background-position: 0px -5145px; } 
+.flair-connecticut { height: 27px; background-position: 0px -5175px; } 
+.flair-delaware { height: 27px; background-position: 0px -5205px; } 
+.flair-florida { height: 27px; background-position: 0px -5235px; } 
+.flair-georgia { height: 27px; background-position: 0px -5265px; } 
+.flair-hawaii { height: 27px; background-position: 0px -5295px; } 
+.flair-idaho { height: 27px; background-position: 0px -5325px; } 
+.flair-illinois { height: 27px; background-position: 0px -5355px; } 
+.flair-indiana { height: 27px; background-position: 0px -5385px; } 
+.flair-iowa { height: 27px; background-position: 0px -5415px; } 
+.flair-kansas { height: 27px; background-position: 0px -5445px; } 
+.flair-kentucky { height: 27px; background-position: 0px -5475px; } 
+.flair-louisiana { height: 27px; background-position: 0px -5505px; } 
+.flair-maine { height: 27px; background-position: 0px -5535px; } 
+.flair-maryland { height: 27px; background-position: 0px -5565px; } 
+.flair-massachusetts { height: 27px; background-position: 0px -5595px; } 
+.flair-michigan { height: 27px; background-position: 0px -5625px; } 
+.flair-minnesota { height: 27px; background-position: 0px -5655px; } 
+.flair-mississippi { height: 27px; background-position: 0px -5685px; } 
+.flair-missouri { height: 27px; background-position: 0px -5715px; } 
+.flair-montana { height: 27px; background-position: 0px -5745px; } 
+.flair-nebraska { height: 27px; background-position: 0px -5775px; } 
+.flair-nevada { height: 27px; background-position: 0px -5805px; } 
+.flair-newhampshire { height: 27px; background-position: 0px -5835px; } 
+.flair-newjersey { height: 27px; background-position: 0px -5865px; } 
+.flair-newmexico { height: 27px; background-position: 0px -5895px; } 
+.flair-newyork { height: 27px; background-position: 0px -5925px; } 
+.flair-northcarolina { height: 27px; background-position: 0px -5955px; } 
+.flair-northdakota { height: 27px; background-position: 0px -5985px; } 
+.flair-ohio { height: 27px; background-position: 0px -6015px; } 
+.flair-oklahoma { height: 27px; background-position: 0px -6045px; } 
+.flair-oregon { height: 27px; background-position: 0px -6075px; } 
+.flair-pennsylvania { height: 27px; background-position: 0px -6105px; } 
+.flair-rhodeisland { height: 27px; background-position: 0px -6135px; } 
+.flair-southcarolina { height: 27px; background-position: 0px -6165px; } 
+.flair-southdakota { height: 27px; background-position: 0px -6195px; } 
+.flair-tennessee { height: 27px; background-position: 0px -6225px; } 
+.flair-texas { height: 27px; background-position: 0px -6255px; } 
+.flair-utah { height: 27px; background-position: 0px -6285px; } 
+.flair-vermont { height: 27px; background-position: 0px -6315px; } 
+.flair-virginia { height: 27px; background-position: 0px -6345px; } 
+.flair-washington { height: 27px; background-position: 0px -6375px; } 
+.flair-westvirginia { height: 27px; background-position: 0px -6405px; } 
+.flair-wisconsin { height: 27px; background-position: 0px -6435px; }
+.flair-wyoming { height: 27px; background-position: 0px -6465px; }
+.flair-gnome { height: 27px; background-position: 0px -6495px; }
+.flair-snoo { height: 27px; background-position: 0px -6525px; }
+.flair-bigv { height: 27px; background-position: 0px -6555px; }
+.flair-koolaid { height: 27px; padding-left: 35px; background-position: 0px -6585px; }
+.flair-slickrick { height: 27px; background-position: 0px -6615px; }
+.flair-angryzim { height: 27px; background-position: 0px -6645px; }
+.flair-hornedv { height: 27px; background-position: 0px -6675px; }
+.flair-reptilian { height: 27px; background-position: 0px -6705px; }
+.flair-grayduck { height: 27px; background-position: 0px -6735px; }
+.flair-barr { height: 27px; background-position: 0px -6765px; }
+.flair-mossfro { height: 27px; background-position: 0px -6795px; }
+.flair-miracle { height: 27px; background-position: 0px -6825px; }
+.flair-happyzim { height: 27px; background-position: 0px -6855px; }
+.flair-gjallarhorn { height: 27px; background-position: 0px -6885px; }
+.flair-timberwolves { height: 27px; background-position: 0px -6915px; }
+.flair-lynx { height: 27px; background-position: 0px -6945px; }
+.flair-twins { height: 27px; background-position: 0px -6975px; }
+.flair-wild { height: 27px; background-position: 0px -7005px; }
+.flair-gophers { height: 27px; background-position: 0px -7035px; }
+.flair-fran { height: 27px; background-position: 0px -7065px; }
+.flair-logo { height: 27px; background-position: 0px -7095px; }
+.flair-helmet { height: 27px; background-position: 0px -7125px; }
+.flair-horn { height: 27px; background-position: 0px -7155px; }
+.flair-flip { height: 27px; background-position: 0px -7185px; }
+.flair-linval { height: 27px; background-position: 0px -7215px; }
+.flair-fist { height: 27px; background-position: 0px -7245px; }
+.flair-canada { height: 27px; background-position: 0px -7275px; }
+.flair-mew { height: 27px; background-position: 0px -7305px; }
+.flair-gedeon { height: 27px; background-position: 0px -7335px; }
+.flair-kirk { height: 27px; background-position: 0px -7365px; }
+.flair-youlikethat { height: 27px; background-position: 0px -7395px; }
+.flair-julie { height: 27px; background-position: 0px -7425px; }
+.flair-vikadontis { height: 27px; background-position: 0px -7455px; }
+.flair-plunderbird { height: 27px; background-position: 0px -7485px; }
+.flair-europe { height: 27px; background-position: 0px -7515px; }
+.flair-africa { height: 27px; background-position: 0px -7545px; }
+.flair-asia { height: 27px; background-position: 0px -7575px; }
+.flair-australia { height: 27px; background-position: 0px -7605px; }
+.flair-latinamerica { height: 27px; background-position: 0px -7635px; }
+.flair-donut { height: 27px; background-position: 0px -7665px; }
+
+/* Team logos for use in comments */
+
+a[href="/ARI"]:before, a[href*="/r/azcardinals"]:before, a[href="/ATL"]:before, a[href*="/r/falcons"]:before, a[href="/BAL"]:before, a[href*="/r/ravens"]:before, a[href="/BUF"]:before, a[href*="/r/buffalobills"]:before, a[href="/CAR"]:before, a[href*="/r/panthers"]:before, a[href="/CHI"]:before, a[href*="/r/chibears"]:before, a[href="/CIN"]:before, a[href*="/r/cinbengals"]:before, a[href*="/r/bengals"]:before, a[href="/CLE"]:before, a[href*="/r/browns"]:before, a[href="/DAL"]:before, a[href*="/r/cowboys"]:before, a[href="/DEN"]:before, a[href*="/r/denverbroncos"]:before, a[href="/DET"]:before, a[href*="/r/detroitlions"]:before, a[href*="/GB"]:before, a[href*="/r/greenbaypackers"]:before, a[href="/HOU"]:before, a[href*="/r/texans"]:before, a[href="/IND"]:before, a[href*="/r/colts"]:before, a[href="/JAC"]:before, a[href*="/r/jaguars"]:before, a[href="/KC"]:before, a[href*="/r/kansascitychiefs"]:before, a[href="/MIA"]:before, a[href*="/r/miamidolphins"]:before, a[href="/MIN"]:before, a[href$="/r/minnesotavikings"]:before, a[href="/NE"]:before, a[href*="/r/patriots"]:before, a[href="/NO"]:before, a[href*="/r/saints"]:before, a[href="/NYG"]:before, a[href*="/r/nygiants"]:before, a[href="/NYJ"]:before, a[href*="/r/nyjets"]:before, a[href="/OAK"]:before, a[href*="/r/oaklandraiders"]:before, a[href="/PHI"]:before, a[href*="/r/eagles"]:before, a[href="/PIT"]:before, a[href*="/r/steelers"]:before, a[href="/LAC"]:before, a[href*="/r/chargers"]:before, a[href="/SF"]:before, a[href*="/r/49ers"]:before, a[href="/SEA"]:before, a[href*="/r/seahawks"]:before, a[href="/LAR"]:before, a[href*="/r/LosAngelesRams"]:before, a[href*="/r/LosAngelesRams"]:before, a[href="/TB"]:before, a[href*="/r/buccaneers"]:before, a[href="/TEN"]:before, a[href*="/r/tntitans"]:before, a[href*="r/tennesseetitans"]:before, a[href="/WAS"]:before, a[href*="/r/redskins"]:before, a[href="/NFL"]:before, a[href*="/r/nfl"]:before {
+width: 20px;
+height: 20px;
+display: inline-block;
+background-repeat: no-repeat;
+background-image: url(%%logos-20x20%%) !important;
+background-position: -9999px -9999px;
+vertical-align: middle;
+margin-right: 3px;
+content: "";
+}
+
+/* [ARI] Arizona Cardinals */
+a[href="/ARI"]:before, a[href*="/r/azcardinals"]:before { background-position: 0 -280px !important }
+a[href="/ARI"]:nth-of-type(n):before, a[href*="/r/azcardinals"]:nth-of-type(n):before { background-position: 0 -280px !important }
+
+/* [ATL] Atlanta Falcons */
+a[href="/ATL"]:before, a[href*="/r/falcons"]:before { background-position: 0 -560px !important }
+a[href="/ATL"]:nth-of-type(n):before, a[href*="/r/falcons"]:nth-of-type(n):before { background-position: 0 -560px !important }
+
+/* [BAL] Baltimore Ravens */
+a[href="/BAL"]:before, a[href*="/r/ravens"]:before { background-position: 0 -960px !important }
+a[href="/BAL"]:nth-of-type(n):before, a[href*="/r/ravens"]:nth-of-type(n):before { background-position: 0 -960px !important }
+
+/* [BUF] Buffalo Bills */
+a[href="/BUF"]:before, a[href*="/r/buffalobills"]:before { background-position: 0 -120px !important }
+a[href="/BUF"]:nth-of-type(n):before, a[href*="/r/buffalobills"]:nth-of-type(n):before { background-position: 0 -120px !important }
+
+/* [CAR] Carolina Panthers */
+a[href="/CAR"]:before, a[href*="/r/panthers"]:before { background-position: 0 -800px !important }
+a[href="/CAR"]:nth-of-type(n):before, a[href*="/r/panthers"]:nth-of-type(n):before { background-position: 0 -800px !important }
+
+/* [CHI] Chicago Bears */
+a[href="/CHI"]:before, a[href*="/r/chibears"]:before { background-position: 0 -40px !important }
+a[href="/CHI"]:nth-of-type(n):before, a[href*="/r/chibears"]:nth-of-type(n):before { background-position: 0 -40px !important }
+
+/* [CIN] Cincinnati Bengals */
+a[href="/CIN"]:before, a[href*="/r/cinbengals"]:before, a[href*="/r/bengals"]:before { background-position: 0 -80px !important }
+a[href="/CIN"]:nth-of-type(n):before, a[href*="/r/cinbengals"]:nth-of-type(n):before, a[href*="/r/bengals"]:nth-of-type(n):before { background-position: 0 -80px !important }
+
+/* [CLE] Cleveland Browns */
+a[href="/CLE"]:before, a[href*="/r/browns"]:before { background-position: 0 -200px !important }
+a[href="/CLE"]:nth-of-type(n):before, a[href*="/r/browns"]:nth-of-type(n):before { background-position: 0 -200px !important }
+
+/* [DAL] Dallas Cowboys */
+a[href="/DAL"]:before, a[href*="/r/cowboys"]:before { background-position: 0 -440px }
+a[href="/DAL"]:nth-of-type(n):before, a[href*="/r/cowboys"]:nth-of-type(n):before { background-position: 0 -440px }
+
+/* [DEN] Denver Broncos */
+a[href="/DEN"]:before, a[href*="/r/denverbroncos"]:before { background-position: 0 -160px !important }
+a[href="/DEN"]:nth-of-type(n):before, a[href*="/r/denverbroncos"]:nth-of-type(n):before { background-position: 0 -160px !important }
+
+/* [DET] Detroit Lions */
+a[href="/DET"]:before, a[href*="/r/detroitlions"]:before { background-position: 0 -720px !important }
+a[href="/DET"]:nth-of-type(n):before, a[href*="/r/detroitlions"]:nth-of-type(n):before{ background-position: 0 -720px !important }
+
+/* [GB] Green Bay Packers */
+a[href="/GB"]:before, a[href*="/r/greenbaypackers"]:before { background-position: 0 -760px !important }
+a[href="/GB"]:nth-of-type(n):before, a[href*="/r/greenbaypackers"]:nth-of-type(n):before { background-position: 0 -760px !important }
+
+/* [HOU] Houston Texans */
+a[href="/HOU"]:before, a[href*="/r/texans"]:before { background-position: 0 -1160px !important }
+a[href="/HOU"]:nth-of-type(n):before, a[href*="/r/texans"]:nth-of-type(n):before { background-position: 0 -1160px !important }
+
+/* [IND] Indianapolis Colts */
+a[href="/IND"]:before, a[href*="/r/colts"]:before { background-position: 0 -400px !important }
+a[href="/IND"]:nth-of-type(n):before, a[href*="/r/colts"]:nth-of-type(n):before { background-position: 0 -400px !important }
+
+/* [JAC] Jacksonville Jaguars */
+a[href="/JAC"]:before, a[href*="/r/jaguars"]:before { background-position: 0 -640px !important }
+a[href="/JAC"]:nth-of-type(n):before, a[href*="/r/jaguars"]:nth-of-type(n):before { background-position: 0 -640px !important }
+
+/* [KC] Kansas City Chiefs */
+a[href="/KC"]:before, a[href*="/r/kansascitychiefs"]:before { background-position: 0 -360px !important }
+a[href="/KC"]:nth-of-type(n):before, a[href*="/r/kansascitychiefs"]:nth-of-type(n):before { background-position: 0 -360px !important }
+
+/* [MIA] Miami Dolphins */
+a[href="/MIA"]:before, a[href*="/r/miamidolphins"]:before { background-position: 0 -480px !important }
+a[href="/MIA"]:nth-of-type(n):before, a[href*="/r/miamidolphins"]:nth-of-type(n):before { background-position: 0 -480px !important }
+
+/* [MIN] Minnesota Vikings */
+a[href="/MIN"]:before, a[href$="/r/minnesotavikings"]:before { background-position: 0 -1240px !important }
+a[href="/MIN"]:nth-of-type(n):before, a[href$="/r/minnesotavikings"]:nth-of-type(n):before { background-position: 0 -1240px !important }
+
+/* [NE] New England Patriots */
+a[href="/NE"]:before, a[href*="/r/patriots"]:before { background-position: 0 -840px !important }
+a[href="/NE"]:nth-of-type(n):before, a[href*="/r/patriots"]:nth-of-type(n):before { background-position: 0 -840px !important }
+
+/* [NO] New Orleans Saints */
+a[href="/NO"]:before, a[href*="/r/saints"]:before { background-position: 0 -1040px !important }
+a[href="/NO"]:nth-of-type(n):before, a[href*="/r/saints"]:nth-of-type(n):before { background-position: 0 -1040px !important }
+
+/* [NYG] New York Giants */
+a[href="/NYG"]:before, a[href*="/r/nygiants"]:before { background-position: 0 -600px !important }
+a[href="/NYG"]:nth-of-type(n):before, a[href*="/r/nygiants"]:nth-of-type(n):before { background-position: 0 -600px !important }
+
+/* [NYJ] New York Jets */
+a[href="/NYJ"]:before, a[href*="/r/nyjets"]:before { background-position: 0 -680px !important }
+a[href="/NYJ"]:nth-of-type(n):before, a[href*="/r/nyjets"]:nth-of-type(n):before { background-position: 0 -680px !important }
+
+/* [OAK] Oakland Raiders */
+a[href="/OAK"]:before, a[href*="/r/oaklandraiders"]:before { background-position: 0 -880px !important }
+a[href="/OAK"]:nth-of-type(n):before, a[href*="/r/oaklandraiders"]:nth-of-type(n):before { background-position: 0 -880px !important }
+
+/* [PHI] Philadelphia Eagles */
+a[href="/PHI"]:before, a[href*="/r/eagles"]:before { background-position: 0 -520px !important }
+a[href="/PHI"]:nth-of-type(n):before, a[href*="/r/eagles"]:nth-of-type(n):before { background-position: 0 -520px !important }
+
+/* [PIT] Pittsburgh Steelers */
+a[href="/PIT"]:before, a[href*="/r/steelers"]:before { background-position: 0 -1120px !important }
+a[href="/PIT"]:nth-of-type(n):before, a[href*="/r/steelers"]:nth-of-type(n):before { background-position: 0 -1120px !important }
+
+/* [LAC] Los Angeles Chargers*/
+a[href="/LAC"]:before, a[href*="/r/chargers"]:before { background-position: 0 -320px !important }
+a[href="/LAC"]:nth-of-type(n):before, a[href*="/r/chargers"]:nth-of-type(n):before { background-position: 0 -320px !important }
+
+/* [SF] San Francisco 49ers */
+a[href="/SF"]:before, a[href*="/r/49ers"]:before { background-position: 0 0px !important }
+a[href="/SF"]:nth-of-type(n):before, a[href*="/r/49ers"]:nth-of-type(n):before { background-position: 0 0px !important }
+
+/* [SEA] Seattle Seahawks */
+a[href="/SEA"]:before, a[href*="/r/seahawks"]:before { background-position: 0 -1080px !important }
+a[href="/SEA"]:nth-of-type(n):before, a[href*="/r/seahawks"]:nth-of-type(n):before { background-position: 0 -1080px !important }
+
+/* [LAR] Los Angeles Rams */
+a[href="/LAR"]:before, a[href*="/r/LosAngelesRams"]:before, a[href*="/r/LosAngelesRams"]:before { background-position: 0 -920px !important }
+a[href="/LAR"]:nth-of-type(n):before, a[href*="/r/LosAngelesRams"]:nth-of-type(n):before, a[href*="/r/LosAngelesRams"]:nth-of-type(n):before { background-position: 0 -920px !important }
+
+/* [TB] Tampa Bay Buccaneers */
+a[href="/TB"]:before, a[href*="/r/buccaneers"]:before { background-position: 0 -240px !important }
+a[href="/TB"]:nth-of-type(n):before, a[href*="/r/buccaneers"]:nth-of-type(n):before { background-position: 0 -240px !important }
+
+/* [TEN] Tennessee Titans */
+a[href="/TEN"]:before, a[href*="/r/tntitans"]:before, a[href*="/r/tennesseetitans"]:before { background-position: 0 -1200px !important }
+a[href="/TEN"]:nth-of-type(n):before, a[href*="/r/tntitans"]:nth-of-type(n):before, a[href*="/r/tennesseetitans"]:nth-of-type(n):before { background-position: 0 -1200px !important }
+
+/* [WAS] Washington Redskins */
+a[href="/WAS"]:before, a[href*="/r/redskins"]:before { background-position: 0 -1000px !important }
+a[href="/WAS"]:nth-of-type(n):before, a[href*="/r/redskins"]:nth-of-type(n):before { background-position: 0 -1000px !important }
+
+/* [NFL] National Football League */
+a[href="/NFL"]:before, a[href*="/r/nfl"]:before { background-position: 0 -1280px !important }
+a[href="/NFL"]:nth-of-type(n):before, a[href*="/r/nfl"]:nth-of-type(n):before { background-position: 0 -1280px !important }
+
+
+
+/*=======Decoration=======*/
+
+/*–––––––Reddit Title–––––––*/
+
+.pagename a {
+font-size: 0px;
+padding: 285px 100% 0 0;
+position: absolute;
+}
+
+.pagename {
+margin-right: 1ex;
+font-size: 0;
+vertical-align: bottom;
+}
+
+/*–––––––Snoo Position–––––––*/
+
+#header-img {
+position: absolute;
+bottom: 25px;
+left: 25px;
+z-index: 9999;
+}
+
+
+/*––––––––Readers Title–––––––*/
+
+div.titlebox span.word { display: none; }
+div.titlebox span.subscribers:after { content: " Purple People Eaters";}
+.users-online { display: none; }
+
+/*––––––Moderator Color–––––––*/
+
+.author.moderator {
+color: #37265c;
+}
+
+.res .thing .tagline .author.moderator {
+color: white !important;
+background-color: #37265c !important;
+font-weight: bold !important;
+border-radius: 3px !important;
+padding: 0px 2px !important;
+}
+
+.tagline .moderator, .green {color: #37265c;}
+
+/*–––––––Bull Moose–––––––
+
+a[href="/BullMoose"]:before {
+width: 162px;
+height: 219px;
+display: inline-block;
+background-repeat: no-repeat;
+background-image: url(%%BullMoose%%) !important;
+background-position: -9999px -9999px;
+vertical-align: middle;
+margin-right: 3px;
+content: "";
+}
+
+a[href="/BullMoose"]:before { background-position: 0 0 !important }
+a[href="/BullMoose"]:nth-of-type(n):before { background-position: 0 0 !important }
+
+*/
+
+
+/*–––––––Flair Selector Box–––––––*/
+
+.flairselector.drop-choices.active{margin-left: -450px;}
+
+/*–––––––Favorite Icons–––––––*/
+
+/* FAVICONS - icons next to post titles (LEFT) */
+/* V 1.3 (280 icons) - Oct/14/2013 = http://i.imgur.com/GLTGiAL.png */
+/* credit: supervoxall, RedditCommentAccount */
+a.title:before{
+background: url(%%favicons%%) no-repeat;
+position:relative;
+content:"";
+display:inline-block;
+margin-right:5px;
+margin-bottom:-2px;
+}
+a[href*=">>>>>>>.com"].title:before {background-position:-64px -0px; height:16px; width:16px;}
+a[href*=">>>>>>>.com"].title:before {background-position:-80px -0px; height:16px; width:16px;}
+a[href*="youtube.com"].title:before, a[href*="youtu.be"].title:before {background-position:-0px -16px; height:16px; width:16px;}
+a[href*="vimeo.com"].title:before {background-position:-16px -16px; height:16px; width:16px;}
+a[href*="liveleak.com"].title:before {background-position:-32px -16px; height:16px; width:16px;}
+a[href*="dailymotion.com"].title:before {background-position:-48px -16px; height:16px; width:16px;}
+a[href*="imgur.com"].title:before {background-position:-64px -16px; height:16px; width:16px;}
+a[href*="i.imgur.com"].title:before {background-position:-80px -16px; height:16px; width:16px;}
+a[href*="minus.com"].title:before {background-position:-0px -32px; height:16px; width:16px;}
+a[href*="i.minus.com"].title:before {background-position:-16px -32px; height:16px; width:16px;}
+a[href*="flickr.com"].title:before {background-position:-32px -32px; height:16px; width:16px;}
+a[href*="photobucket.com"].title:before {background-position:-48px -32px; height:16px; width:16px;}
+a[href*="instagram.com"].title:before {background-position:-64px -32px; height:16px; width:16px;}
+a[href*="imageshack.us"].title:before {background-position:-80px -32px; height:16px; width:16px;}
+a[href*="tumblr.com"].title:before {background-position:-0px -48px; height:16px; width:16px;}
+a[href*="pinterest.com"].title:before, a[href*="pinimg.com"].title:before {background-position:-16px -48px; height:16px; width:16px;}
+a[href*="deviantart.com"].title:before, a[href*="deviantart.net"].title:before {background-position:-32px -48px; height:16px; width:16px;}
+a[href*="twitter.com"].title:before, a[href*="twimg.com"].title:before {background-position:-48px -48px; height:16px; width:16px;}
+a[href*="picasa.com"].title:before, a[href*="googleusercontet.com"].title:before {background-position:-64px -48px; height:16px; width:16px;}
+a[href*="twitpic.com"].title:before {background-position:-80px -48px; height:16px; width:16px;}
+a[href*="dropbox.com"].title:before {background-position:-0px -64px; height:16px; width:16px;}
+a[href*="mega.co.nz"].title:before {background-position:-16px -64px; height:16px; width:16px;}
+a[href*="stumbleupon.com"].title:before {background-position:-32px -64px; height:16px; width:16px;}
+a[href*="wordpress.com"].title:before {background-position:-48px -64px; height:16px; width:16px;}
+a[href*="facebook.com"].title:before, a[href*="fbcdn.net"].title:before, a[href*="akamaihd.net "].title:before {background-position:-64px -64px; height:16px; width:16px;}
+a[href*="linkedin.com"].title:before {background-position:-80px -64px; height:16px; width:16px;}
+a[href*="blogspot.com"].title:before, a[href*="blogger.com"].title:before {background-position:-0px -80px; height:16px; width:16px;}
+a[href*="pandora.com"].title:before {background-position:-16px -80px; height:16px; width:16px;}
+a[href*="digg.com"].title:before {background-position:-32px -80px; height:16px; width:16px;}
+a[href*="livememe.com"].title:before {background-position:-48px -80px; height:16px; width:16px;}
+a[href*="quickmeme.com"].title:before, a[href*="qkme.me"].title:before {background-position:-64px -80px; height:16px; width:16px;}
+a[href*="memedad.com"].title:before {background-position:-80px -80px; height:16px; width:16px;}
+a[href*="plus.google.com"].title:before {background-position:-0px -100px; height:16px; width:16px;}
+a[href*="yahoo.com"].title:before {background-position:-16px -100px; height:16px; width:16px;}
+a[href*="myspace.com"].title:before {background-position:-32px -100px; height:16px; width:16px;}
+a[href*="delicious.com"].title:before {background-position:-48px -100px; height:16px; width:16px;}
+a[href*="hulu.com"].title:before {background-position:-64px -100px; height:16px; width:16px;}
+a[href*="netflix.com"].title:before {background-position:-80px -100px; height:16px; width:16px;}
+a[href*="imdb.com"].title:before {background-position:-0px -116px; height:16px; width:16px;}
+a[href*="cracked.com"].title:before {background-position:-16px -116px; height:16px; width:16px;}
+a[href*="thenextweb.com"].title:before {background-position:-32px -116px; height:16px; width:16px;}
+a[href*="gawker.com"].title:before, a[href*="gawkerassets.com"].title:before {background-position:-48px -116px; height:16px; width:16px;}
+a[href*="twitch.tv"].title:before {background-position:-64px -116px; height:16px; width:16px;}
+a[href*="justin.tv"].title:before {background-position:-80px -116px; height:16px; width:16px;}
+a[href*="worldstarhiphop.com"].title:before {background-position:-0px -132px; height:16px; width:16px;}
+a[href*="nationalgeographic.com"].title:before {background-position:-16px -132px; height:16px; width:16px;}
+a[href*="metacafe.com"].title:before {background-position:-32px -132px; height:16px; width:16px;}
+a[href*="audible.com"].title:before {background-position:-48px -132px; height:16px; width:16px;}
+a[href*="slashfilm.com"].title:before {background-position:-64px -132px; height:16px; width:16px;}
+a[href*="rottentomatoes.com"].title:before {background-position:-80px -132px; height:16px; width:16px;}
+a[href*="hollywoodreporter.com"].title:before {background-position:-0px -148px; height:16px; width:16px;}
+a[href*="variety.com"].title:before {background-position:-16px -148px; height:16px; width:16px;}
+a[href*="tmz.com"].title:before {background-position:-32px -148px; height:16px; width:16px;}
+a[href*="break.com"].title:before {background-position:-48px -148px; height:16px; width:16px;}
+a[href*="vice.com"].title:before {background-position:-64px -148px; height:16px; width:16px;}
+a[href*="theonion.com"].title:before {background-position:-80px -148px; height:16px; width:16px;}
+a[href*="veoh.com"].title:before {background-position:-0px -164px; height:16px; width:16px;}
+a[href*="videobash.com"].title:before {background-position:-16px -164px; height:16px; width:16px;}
+a[href*="http://rt.com"].title:before {background-position:-32px -164px; height:16px; width:16px;}
+a[href*="thinkprogress.org"].title:before {background-position:-48px -164px; height:16px; width:16px;}
+a[href*="rollingstone.com"].title:before {background-position:-64px -164px; height:16px; width:16px;}
+a[href*="globalpost.co"].title:before {background-position:-80px -164px; height:16px; width:16px;}
+a[href*="abcnews.go.com"].title:before, a[href*="abc.go.com"].title:before {background-position:-0px -180px; height:16px; width:16px;}
+a[href*="talkingpointsmemo.com"].title:before {background-position:-16px -180px; height:16px; width:16px;}
+a[href*="newrepublic.com"].title:before {background-position:-32px -180px; height:16px; width:16px;}
+a[href*="theatlanticwire.com"].title:before {background-position:-48px -180px; height:16px; width:16px;}
+a[href*="theatlantic.com"].title:before {background-position:-64px -180px; height:16px; width:16px;}
+a[href*="fool.com"].title:before {background-position:-80px -180px; height:16px; width:16px;}
+a[href*="newsmax.com"].title:before {background-position:-0px -200px; height:16px; width:16px;}
+a[href*="moneynews.com"].title:before {background-position:-16px -200px; height:16px; width:16px;}
+a[href*="newsmaxworld.com"].title:before {background-position:-32px -200px; height:16px; width:16px;}
+a[href*="newsmaxhealth.com"].title:before {background-position:-48px -200px; height:16px; width:16px;}
+a[href*="thedailybeast.com"].title:before {background-position:-64px -200px; height:16px; width:16px;}
+a[href*="mediamatters.org"].title:before {background-position:-80px -200px; height:16px; width:16px;}
+a[href*="politfact.com"].title:before {background-position:-0px -216px; height:16px; width:16px;}
+a[href*="mediaite.com"].title:before {background-position:-16px -216px; height:16px; width:16px;}
+a[href*="slate.com"].title:before {background-position:-32px -216px; height:16px; width:16px;}
+a[href*="thecontributer.com"].title:before {background-position:-48px -216px; height:16px; width:16px;}
+a[href*="rightwingwatch.com"].title:before {background-position:-64px -216px; height:16px; width:16px;}
+a[href*="rawstory.com"].title:before {background-position:-80px -216px; height:16px; width:16px;}
+a[href*="ap.org"].title:before {background-position:-0px -232px; height:16px; width:16px;}
+a[href*="aol.com"].title:before {background-position:-16px -232px; height:16px; width:16px;}
+a[href*="sky.co"].title:before {background-position:-32px -232px; height:16px; width:16px;}
+a[href*="presseurop.eu"].title:before {background-position:-48px -232px; height:16px; width:16px;}
+a[href*="telegraph.co.uk"].title:before {background-position:-64px -232px; height:16px; width:16px;}
+a[href*="guardian.co"].title:before {background-position:-80px -232px; height:16px; width:16px;}
+a[href*="channel4.co"].title:before {background-position:-0px -248px; height:16px; width:16px;}
+a[href*="independent.co.uk"].title:before {background-position:-16px -248px; height:16px; width:16px;}
+a[href*="boston.com"].title:before {background-position:-32px -248px; height:16px; width:16px;}
+a[href*="bostonglobe.com"].title:before {background-position:-48px -248px; height:16px; width:16px;}
+a[href*="bostonherald.com"].title:before {background-position:-64px -248px; height:16px; width:16px;}
+a[href*="realclearpolitics.com"].title:before {background-position:-80px -248px; height:16px; width:16px;}
+a[href*="financialtimes.com"].title:before {background-position:-0px -264px; height:16px; width:16px;}
+a[href*="dailykos.com"].title:before {background-position:-16px -264px; height:16px; width:16px;}
+a[href*="theglobeandmail.com"].title:before {background-position:-32px -264px; height:16px; width:16px;}
+a[href*="theblaze.com"].title:before {background-position:-48px -264px; height:16px; width:16px;}
+a[href*="motherjones.com"].title:before {background-position:-64px -264px; height:16px; width:16px;}
+a[href*="cbcnews.com"].title:before {background-position:-80px -264px; height:16px; width:16px;}
+a[href*="nydailynews.com"].title:before {background-position:-0px -280px; height:16px; width:16px;}
+a[href*="wsj.com"].title:before {background-position:-16px -280px; height:16px; width:16px;}
+a[href*="washingtonpost.com"].title:before {background-position:-32px -280px; height:16px; width:16px;}
+a[href*="dailymail.co.uk"].title:before {background-position:-48px -280px; height:16px; width:16px;}
+a[href*="buzzfeed.com"].title:before {background-position:-64px -280px; height:16px; width:16px;}
+a[href*="usatoday.com"].title:before {background-position:-80px -280px; height:16px; width:16px;}
+a[href*="businessinsider.com"].title:before {background-position:-0px -300px; height:16px; width:16px;}
+a[href*="huffingtonpost.com"].title:before {background-position:-16px -300px; height:16px; width:16px;}
+a[href*="npr.org"].title:before {background-position:-32px -300px; height:16px; width:16px;}
+a[href*="forbes.com"].title:before {background-position:-48px -300px; height:16px; width:16px;}
+a[href*="aljazeera.com"].title:before {background-position:-64px -300px; height:16px; width:16px;}
+a[href*="economist.com"].title:before {background-position:-80px -300px; height:16px; width:16px;}
+a[href*="bloomberg.com"].title:before {background-position:-0px -316px; height:16px; width:16px;}
+a[href*="businessweek.com"].title:before {background-position:-16px -316px; height:16px; width:16px;}
+a[href*="cnn.com"].title:before {background-position:-32px -316px; height:16px; width:16px;}
+a[href*="foxnews.com"].title:before {background-position:-48px -316px; height:16px; width:16px;}
+a[href*="cnbc.com"].title:before, a[href*="nbc.com"].title:before, a[href*="nbcnews.com"].title:before {background-position:-64px -316px; height:16px; width:16px;}
+a[href*="bbc.co"].title:before {background-position:-80px -316px; height:16px; width:16px;}
+a[href*="politicususa.com"].title:before {background-position:-0px -332px; height:16px; width:16px;}
+a[href*="esquire.com"].title:before {background-position:-16px -332px; height:16px; width:16px;}
+a[href*="thehill.com"].title:before {background-position:-32px -332px; height:16px; width:16px;}
+a[href*="csmonitor.com"].title:before {background-position:-48px -332px; height:16px; width:16px;}
+a[href*="politico.com"].title:before {background-position:-64px -332px; height:16px; width:16px;}
+a[href*="mirror.co.uk"].title:before {background-position:-80px -332px; height:16px; width:16px;}
+a[href*="marketwatch.com"].title:before {background-position:-0px -348px; height:16px; width:16px;}
+a[href*="ted.com"].title:before {background-position:-16px -348px; height:16px; width:16px;}
+a[href*="nytimes.com"].title:before {background-position:-32px -348px; height:16px; width:16px;}
+a[href*="latimes.com"].title:before {background-position:-48px -348px; height:16px; width:16px;}
+a[href*="reuters.com"].title:before {background-position:-64px -348px; height:16px; width:16px;}
+a[href*="salon.com"].title:before {background-position:-80px -348px; height:16px; width:16px;}
+a[href*="torrentfreak.com"].title:before {background-position:-0px -364px; height:16px; width:16px;}
+a[href*="arstechnica.com"].title:before {background-position:-16px -364px; height:16px; width:16px;}
+a[href*="pcmag.com"].title:before {background-position:-32px -364px; height:16px; width:16px;}
+a[href*="gizmodo.com"].title:before {background-position:-48px -364px; height:16px; width:16px;}
+a[href*="venturebeat.com"].title:before {background-position:-64px -364px; height:16px; width:16px;}
+a[href*="theverge.com"].title:before {background-position:-80px -364px; height:16px; width:16px;}
+a[href*="lifehacker.com"].title:before {background-position:-0px -380px; height:16px; width:16px;}
+a[href*="techcrunch.com"].title:before {background-position:-16px -380px; height:16px; width:16px;}
+a[href*="mashable.com"].title:before, a[href*="mshcdn.com"].title:before {background-position:-32px -380px; height:16px; width:16px;}
+a[href*="wired.com"].title:before {background-position:-48px -380px; height:16px; width:16px;}
+a[href*="engadget.com"].title:before {background-position:-64px -380px; height:16px; width:16px;}
+a[href*="cnet.com"].title:before {background-position:-80px -380px; height:16px; width:16px;}
+a[href*="bgr.com"].title:before {background-position:-0px -400px; height:16px; width:16px;}
+a[href*="revision3.com"].title:before {background-position:-16px -400px; height:16px; width:16px;}
+a[href*="techdirt.com"].title:before {background-position:-32px -400px; height:16px; width:16px;}
+a[href*="io9.com"].title:before {background-position:-48px -400px; height:16px; width:16px;}
+a[href*="phys.org"].title:before {background-position:-64px -400px; height:16px; width:16px;}
+a[href*="discovery.com"].title:before {background-position:-80px -400px; height:16px; width:16px;}
+a[href*="eurekalert.org"].title:before {background-position:-0px -416px; height:16px; width:16px;}
+a[href*="nature.com"].title:before {background-position:-16px -416px; height:16px; width:16px;}
+a[href*="newscientist.com"].title:before {background-position:-32px -416px; height:16px; width:16px;}
+a[href*="popsci.com"].title:before {background-position:-48px -416px; height:16px; width:16px;}
+a[href*="indiegogo.com"].title:before {background-position:-64px -416px; height:16px; width:16px;}
+a[href*="kickstarter.com"].title:before {background-position:-80px -416px; height:16px; width:16px;}
+a[href*="house.gov"].title:before {background-position:-0px -432px; height:16px; width:16px;}
+a[href*="http://google.com"].title:before {background-position:-16px -432px; height:16px; width:16px;}
+a[href*="DUPLICATE.COM"].title:before {background-position:-32px -432px; height:16px; width:16px;}
+a[href*="wikipedia.org"].title:before {background-position:-48px -432px; height:16px; width:16px;}
+a[href*="bing.com"].title:before {background-position:-64px -432px; height:16px; width:16px;}
+a[href*="msn.com"].title:before {background-position:-80px -432px; height:16px; width:16px;}
+a[href*="about.com"].title:before {background-position:-0px -448px; height:16px; width:16px;}
+a[href*="http://android.com"].title:before {background-position:-16px -448px; height:16px; width:16px;}
+a[href*="wikia.com"].title:before {background-position:-32px -448px; height:16px; width:16px;}
+a[href*="cliffnotes.com"].title:before {background-position:-48px -448px; height:16px; width:16px;}
+a[href*="paypal.com"].title:before {background-position:-64px -448px; height:16px; width:16px;}
+a[href*="weather.com"].title:before {background-position:-80px -448px; height:16px; width:16px;}
+a[href*="adobe.com"].title:before {background-position:-0px -464px; height:16px; width:16px;}
+a[href*="fiverr.com"].title:before {background-position:-16px -464px; height:16px; width:16px;}
+a[href*="usps.com"].title:before {background-position:-32px -464px; height:16px; width:16px;}
+a[href*="thepiratebay.sk"].title:before {background-position:-48px -464px; height:16px; width:16px;}
+a[href*="dictionary.com"].title:before {background-position:-64px -464px; height:16px; width:16px;}
+a[href*="thesaurus.com"].title:before {background-position:-80px -464px; height:16px; width:16px;}
+a[href*="ehow.com"].title:before {background-position:-0px -480px; height:16px; width:16px;}
+a[href*="wikihow.com"].title:before {background-position:-16px -480px; height:16px; width:16px;}
+a[href*="metacritic.com"].title:before {background-position:-32px -480px; height:16px; width:16px;}
+a[href*="pastebin.com"].title:before {background-position:-48px -480px; height:16px; width:16px;}
+a[href*="ask.com"].title:before {background-position:-64px -480px; height:16px; width:16px;}
+a[href*="yellowpages.com"].title:before {background-position:-80px -480px; height:16px; width:16px;}
+a[href*="microsoft.com"].title:before {background-position:-0px -500px; height:16px; width:16px;}
+a[href*="maps.google.com"].title:before {background-position:-16px -500px; height:16px; width:16px;}
+a[href*="spotify.com"].title:before {background-position:-32px -500px; height:16px; width:16px;}
+a[href*="bandcamp.com"].title:before {background-position:-48px -500px; height:16px; width:16px;}
+a[href*="grooveshark.com"].title:before {background-position:-64px -500px; height:16px; width:16px;}
+a[href*="soundcloud.com"].title:before {background-position:-80px -500px; height:16px; width:16px;}
+a[href*="spankwire.com"].title:before {background-position:-0px -516px; height:16px; width:16px;}
+a[href*="tube8.com"].title:before {background-position:-16px -516px; height:16px; width:16px;}
+a[href*="redtube.com"].title:before {background-position:-32px -516px; height:16px; width:16px;}
+a[href*="pornhub.com"].title:before {background-position:-48px -516px; height:16px; width:16px;}
+a[href*="xhamster.com"].title:before {background-position:-64px -516px; height:16px; width:16px;}
+a[href*="youporn.com"].title:before {background-position:-80px -516px; height:16px; width:16px;}
+a[href*="xvideos.com"].title:before {background-position:-0px -532px; height:16px; width:16px;}
+a[href*="youjizz.com"].title:before {background-position:-16px -532px; height:16px; width:16px;}
+a[href*="xnxx.com"].title:before {background-position:-32px -532px; height:16px; width:16px;}
+a[href*="humblebundle.com"].title:before {background-position:-48px -532px; height:16px; width:16px;}
+a[href*="craigslist.org"].title:before {background-position:-64px -532px; height:16px; width:16px;}
+a[href*="etsy.com"].title:before, a[href*="etsystatic.com"].title:before {background-position:-80px -532px; height:16px; width:16px;}
+a[href*="dell.com"].title:before {background-position:-0px -548px; height:16px; width:16px;}
+a[href*="ebay.com"].title:before {background-position:-16px -548px; height:16px; width:16px;}
+a[href*="gamestop.com"].title:before {background-position:-32px -548px; height:16px; width:16px;}
+a[href*="bestbuy.com"].title:before {background-position:-48px -548px; height:16px; width:16px;}
+a[href*="amazon.com"].title:before {background-position:-64px -548px; height:16px; width:16px;}
+a[href*="kmart.com"].title:before {background-position:-80px -548px; height:16px; width:16px;}
+a[href*="target.com"].title:before {background-position:-0px -564px; height:16px; width:16px;}
+a[href*="walmart.com"].title:before {background-position:-16px -564px; height:16px; width:16px;}
+a[href*="toysrus.com"].title:before {background-position:-32px -564px; height:16px; width:16px;}
+a[href*="babiesrus.com"].title:before {background-position:-48px -564px; height:16px; width:16px;}
+a[href*="play.google.com"].title:before {background-position:-64px -564px; height:16px; width:16px;}
+a[href*="apple.com"].title:before {background-position:-80px -564px; height:16px; width:16px;}
+a[href*="newegg.com"].title:before {background-position:-0px -580px; height:16px; width:16px;}
+a[href*="livingsocial.com"].title:before {background-position:-16px -580px; height:16px; width:16px;}
+a[href*="groupon.com"].title:before {background-position:-32px -580px; height:16px; width:16px;}
+a[href*="yelp.com"].title:before {background-position:-48px -580px; height:16px; width:16px;}
+a[href*="gamereactor.com"].title:before {background-position:-64px -580px; height:16px; width:16px;}
+a[href*="xbox.com"].title:before {background-position:-80px -580px; height:16px; width:16px;}
+a[href*="destructoid.com"].title:before {background-position:-0px -600px; height:16px; width:16px;}
+a[href*="polygon.com"].title:before {background-position:-16px -600px; height:16px; width:16px;}
+a[href*="joystiq.com"].title:before {background-position:-32px -600px; height:16px; width:16px;}
+a[href*="kotaku.com"].title:before, a[href*=">>>>>>>kotaku.au"].title:before {background-position:-48px -600px; height:16px; width:16px;}
+a[href*="gamespot.com"].title:before {background-position:-64px -600px; height:16px; width:16px;}
+a[href*="ign.com"].title:before {background-position:-80px -600px; height:16px; width:16px;}
+a[href*="gametrailers.com"].title:before {background-position:-0px -616px; height:16px; width:16px;}
+a[href*="giantbomb.com"].title:before {background-position:-16px -616px; height:16px; width:16px;}
+a[href*="videogamer.com"].title:before {background-position:-32px -616px; height:16px; width:16px;}
+a[href*="neogaf.com"].title:before {background-position:-48px -616px; height:16px; width:16px;}
+a[href*="gameinformer.com"].title:before {background-position:-64px -616px; height:16px; width:16px;}
+a[href*="steampowered.com"].title:before {background-position:-80px -616px; height:16px; width:16px;}
+a[href*="military.com"].title:before {background-position:-0px -632px; height:16px; width:16px;}
+a[href*="seattletimes.com"].title:before {background-position:-16px -632px; height:16px; width:16px;}
+a[href*="http://times.com"].title:before {background-position:-32px -632px; height:16px; width:16px;}
+a[href*="boingboing.net"].title:before {background-position:-48px -632px; height:16px; width:16px;}
+a[href*="senate.gov"].title:before {background-position:-64px -632px; height:16px; width:16px;}
+a[href*="escapistmagazine.com"].title:before {background-position:-80px -632px; height:16px; width:16px;}
+a[href*="ceo.com"].title:before {background-position:-0px -648px; height:16px; width:16px;}
+a[href*="france24.com"].title:before {background-position:-16px -648px; height:16px; width:16px;}
+a[href*="nypost.com"].title:before {background-position:-32px -648px; height:16px; width:16px;}
+a[href*="funnyordie.com"].title:before {background-position:-48px -648px; height:16px; width:16px;}
+a[href*="allthingsd.com"].title:before {background-position:-64px -648px; height:16px; width:16px;}
+a[href*="foxbusiness.com"].title:before {background-position:-80px -648px; height:16px; width:16px;}
+a[href*="playstation.com"].title:before {background-position:-0px -664px; height:16px; width:16px;}
+a[href*="sonyentertainment.com"].title:before {background-position:-16px -664px; height:16px; width:16px;}
+a[href*="1up.com"].title:before {background-position:-32px -664px; height:16px; width:16px;}
+a[href*="examiner.com"].title:before {background-position:-48px -664px; height:16px; width:16px;}
+a[href*="androidauthority.com"].title:before {background-position:-64px -664px; height:16px; width:16px;}
+a[href*="androidpolice.com"].title:before {background-position:-80px -664px; height:16px; width:16px;}
+a[href*="androidcentral.com"].title:before {background-position:-0px -680px; height:16px; width:16px;}
+a[href*="phonearena.com"].title:before {background-position:-16px -680px; height:16px; width:16px;}
+a[href*="cbsnews.com"].title:before, a[href*="cbs.com"].title:before {background-position:-32px -680px; height:16px; width:16px;}
+a[href*="inquisitir.com"].title:before {background-position:-48px -680px; height:16px; width:16px;}
+a[href*="forwardprosgress.com"].title:before {background-position:-64px -680px; height:16px; width:16px;}
+a[href*="usa.gov"].title:before {background-position:-80px -680px; height:16px; width:16px;}
+a[href*="collegehumor.com"].title:before, a[href*="collegehumor.cvcdn.com"].title:before {background-position:-0px -700px; height:16px; width:16px;}
+a[href*="makeameme.org"].title:before {background-position:-16px -700px; height:16px; width:16px;}
+a[href*="pbs.org"].title:before {background-position:-32px -700px; height:16px; width:16px;}
+a[href*="dribbble.com"].title:before, a[href*=">>>>>>>kotaku.au"].title:before {background-position:-48px -700px; height:16px; width:16px;}
+a[href*="gematsu.com"].title:before {background-position:-64px -700px; height:16px; width:16px;}
+a[href*="wikimedia.org"].title:before {background-position:-80px -700px; height:16px; width:16px;}
+a[href*="vg247.com"].title:before {background-position:-0px -716px; height:16px; width:16px;}
+a[href*="eurogamer.net"].title:before {background-position:-16px -716px; height:16px; width:16px;}
+a[href*="origin.com"].title:before {background-position:-32px -716px; height:16px; width:16px;}
+a[href*="sfgate.com"].title:before {background-position:-48px -716px; height:16px; width:16px;}
+a[href*="gallup.com"].title:before {background-position:-64px -716px; height:16px; width:16px;}
+a[href*="cloudfront.net"].title:before {background-position:-80px -716px; height:16px; width:16px;}
+a[href*="themorningnews.org"].title:before {background-position:-0px -732px; height:16px; width:16px;}
+a[href*="spiegel.de"].title:before {background-position:-16px -732px; height:16px; width:16px;}
+a[href*="news.com.au"].title:before {background-position:-32px -732px; height:16px; width:16px;}
+a[href*="espn.go.com"].title:before {background-position:-48px -732px; height:16px; width:16px;}
+a[href*="geek.com"].title:before {background-position:-64px -732px; height:16px; width:16px;}
+a[href*="usmagazine.com"].title:before {background-position:-80px -732px; height:16px; width:16px;}
+a[href*="change.org"].title:before {background-position:-0px -748px; height:16px; width:16px;}
+a[href*="thespectator.co.uk"].title:before, a[href*="500px.org"].title:before {background-position:-16px -748px; height:16px; width:16px;}
+a[href*="metro.co.uk"].title:before {background-position:-32px -748px; height:16px; width:16px;}
+a[href*="500px.com"].title:before, a[href*="500px.org"].title:beforee {background-position:-48px -748px; height:16px; width:16px;}
+a[href*="patheos.com"].title:before {background-position:-64px -748px; height:16px; width:16px;}
+a[href*="web.archive.org"].title:before {background-position:-80px -748px; height:16px; width:16px;}
+a[href*="memegenerator.net"].title:before {background-position:-0px -764px; height:16px; width:16px;}
+a[href*="thefiscaltimes.com"].title:before {background-position:-16px -764px; height:16px; width:16px;}
+a[href*="computerandvideogames.com"].title:before {background-position:-32px -764px; height:16px; width:16px;}
+a[href*="gamefaqs.com"].title:before {background-position:-48px -764px; height:16px; width:16px;}
+a[href*="news.google.com"].title:before {background-position:-64px -764px; height:16px; width:16px;}
+a[href*="leagueoflegends.com"].title:before {background-position:-80px -764px; height:16px; width:16px;}
+/*HYPE SHAKEY TEXT*/
+a[href="/gethype"] {
+color: #000000;
+text-transform: uppercase;
+display: block;
+font-size: 15px;
+animation: intensify .1s steps(5) infinite;
+-webkit-animation: intensify .1s steps(5) infinite;
+-moz-animation: intensify .1s steps(5) infinite;
+}
+@keyframes intensify {
+ 0% { margin-left: 0px; }
+ 100% { margin-left: 2px; }
+}
+@-webkit-keyframes intensify {
+ 0% { margin-left: 0px; }
+ 100% { margin-left: 2px; }
+}
+@-moz-keyframes intensify {
+ 0% { margin-left: 0px; }
+ 100% { margin-left: 2px; }
+}
+/* Links to other team subreddits -- thanks /r/Seahawks */
+.side h6 + ul {
+list-style-type: none;
+position: absolute;
+top: 270px;
+right: 155px;
+z-index: 99;
+margin: 0;
+}
+.side h6 + ul li {
+display: block;
+}
+.side h6 + ul li ~ li {
+display:none;
+background-color: #ffffff;
+border: 1px solid #37265c;
+}
+.side h6 + ul li a:nth-child(5),
+.side h6 + ul li a:nth-child(9),
+.side h6 + ul li a:nth-child(13) {
+padding-left: 6px;
+}
+.side h6 + ul li a:nth-child(8) {
+margin-right: -3px;
+padding-right: 8px;
+}
+.side h6 + ul li:first-child {
+position: absolute;
+right: -50px;
+}
+.side h6 + ul li:first-child a {
+display: block;
+height: 40px;
+width: 40px;
+background: transparent url(%%nflheaderlogo%%) no-repeat 0 0px;
+}
+.side h6 + ul li:first-child a:hover {
+background-position: 0 -40px;
+}
+.side h6 + ul li a[href="/r/NFL"]:before {
+content: normal;
+}
+.side .md ul {
+margin-top: -50px;
+}
+.side h6 + ul li:first-child:hover ~ li,.side .md ul:hover li:not(:first-child) {
+display:block;
+}
+.side h6 + ul li a {
+display: inline-block;
+width: 20px;
+height: 22px;
+line-height: 20px;
+margin: 0 10px;
+}
+/*========Custom Shitpost Flair for Specific Users=======*/
+.author[href$="/ILikeLampz"]:before {
+    content: ' ';
+    display: inline-block;
+    height: 60px;
+    overflow: hidden;
+    width: 20px;
+    background-image: url(%%customflairs%%);
+    background-repeat: no-repeat;
+    background-position: 0px -30px;
+}
+.author[href$="/youvebeengreggd"]:before {
+    content: ' ';
+    display: inline-block;
+    height: 55px;
+    overflow: hidden;
+    width: 64px;
+    padding-right: 5px;
+    background-image: url(%%customflairs%%);
+    background-repeat: no-repeat;
+    background-position: 0px -90px;
+}
+.author[href$="/BrownianNotion"]:before {
+    content: ' ';
+    display: inline-block;
+    height: 30px;
+    overflow: hidden;
+    width: 30px;
+    padding-right: 5px;
+    background-image: url(%%customflairs%%);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+
+.author[href$="/GREAT_BARRIER_REIFF"]:before {
+    content: ' ';
+    display: inline-block;
+    height: 86px;
+    overflow: hidden;
+    width: 64px;
+    padding-right: 5px;
+    background-image: url(%%customflairs%%);
+    background-repeat: no-repeat;
+    background-position: 0px -146px;
+}
+.author[href$="/its_treason_then_"]:before {
+    content: ' ';
+    display: inline-block;
+    height: 35px;
+    overflow: hidden;
+    width: 32px;
+    padding-right: 5px;
+    background-image: url(%%customflairs%%);
+    background-repeat: no-repeat;
+    background-position: 0px -232px;
+}
