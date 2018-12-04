@@ -198,7 +198,7 @@ background-position: 1100px 0;
 
 #header-bottom-left {
     background-color: #FFFFFF;
-    background-image: url(%%skol-bunyan%%);
+    background-image: url(%%bruhhhh%%);
     height: 285px;
     font-size: inherit !important;
     background-position: bottom;
@@ -350,19 +350,18 @@ body > .content:before {
 
 /*=======Side=======*/
 
-/*
 div.side {
     margin-top: 6px;
-    padding: 390px 0px 0px 0px;
-    background: top right 0px no-repeat url(%%VikingsDefault%%) !important;
+    padding: 435px 0px 0px 0px;
+    background: top right 0px no-repeat url(%%MEWChristmas%%) !important;
     background-size: 50%;
 }
-*/
  
 /*
 Animated sidebar. Uncomment the next block and comment the previous block for animations. Comment the next block and uncomment the previous for no animations
 */
 
+/*
 div.side {
     margin-top: 6px;
     padding: 390px 0px 0px 0px;
@@ -381,6 +380,7 @@ div.side {
 @-webkit-keyframes AnimatedSideBar {
     100%  { background-position: -1204px 0; }
 }
+*/
 
 div.side:before {
     font-weight: 600;
