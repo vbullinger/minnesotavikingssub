@@ -1,1 +1,17 @@
-Put unminified CSS here. Use https://cssminifier.com/ on the source code and paste the results in the site CSS.
+Hey! /u/vbullinger here! If you're reading this, you're probably a moderator of /r/minnesotavikings or someone trying to help us out or someone trying to rip off our stuff :)
+
+Here's the process for updating the sub's CSS:
+
+1. Clone the github repo. Don't know how to do that? I suggest Source Tree. I have used it professionally for years. I'm good with command line GIT, but even I will make mistakes. Anybody that uses the command line is probably super arrogant and annoying. Don't mess up the sub. Just use a tool like Source Tree. https://www.sourcetreeapp.com/ They'll give you all the instructions for getting started with GIT, etc. I'm not going to explain all that here. Google, YouTube, etc. When you're ready to clone the repo, here's the URL:
+
+https://github.com/vbullinger/minnesotavikingssub.git
+
+2. Now, go to where it copied all the files onto your computer and change the CSS. I suggest using a nice tool. I use VS Code or Visual Studio, but there are a billion tools that are suited just for CSS editing. This one is free and is online, no downloading necessary: https://html-css-js.com/css/editor/
+
+3. All done editing? You can test your CSS in Reddit by using the preview option, even editing in there if you want. When you're done, save all your stuff and make a pull request for the repo listed above. I'm not explaining that. Google it. Saving in Reddit is what "counts." But the pull requests are for saving off for a record of changes, access to everything, etc.
+
+4. Minify your CSS. The CSS we use is getting too big for Reddit's editors! They are preventing us from saving our CSS! So we must "minify" the CSS. It will remove comments, spacing, etc., to make it as small as possible to allow us to jam more CSS in. There are plenty of free tools online, such as https://cssminifier.com/ that you can use to minify the CSS.
+
+5. Paste the minified CSS into the Reddit CSS box and hit save. Feel free to preview before saving.
+
+6. Are you adding a banner or sidebar image? Put them in the appropriate folders so we all have raw files, etc. Feel free to add other image folders or concepts or raw PhotoShop files, etc.
